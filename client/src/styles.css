@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/* ----------------------------------------------------------------------------------------------------------------- generalize styles */
+
+* {
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;   
+}
+
+/* -------------------------------------------------------- Text colors */
+.text-red {
+    color: #F20530;
+}
+
+.text-yellow {
+    color: #F2D541;
+}
+
+.blue-text-shadow {
+    text-shadow: -2px 4px #28397d; 
+}
+
+
+/* --------------------------------------------- Background colors */
+.navbar {
+    min-height: 144px;
+}
+
+.bg-black {
+    background-color: #0D0500;
+}
+
+
+/* ------------------------------------------------------------- Borders */
+
+.border-top-red {
+    border-top: 2px solid #F20530;
+}
+
+.boarder-bot-red {
+    border-bottom: 2px solid #F20530;
+}

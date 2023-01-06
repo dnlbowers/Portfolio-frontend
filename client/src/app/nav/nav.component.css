@@ -1,0 +1,13 @@
+/* -------------------------------------------------------------- Navbar */
+
+#title {
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    font-size: 2rem; 
+}
+
+.link-light:hover {
+    color: #F20530 !important;
+}
