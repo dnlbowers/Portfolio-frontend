@@ -23,12 +23,29 @@
 
 
 /* --------------------------------------------- Background colors */
-.navbar {
-    min-height: 144px;
+
+.bg-black {
+    background-color: #0D0500;
 }
 
 .bg-black {
     background-color: #0D0500;
+}
+
+.hero-bg {
+    background-color: #026873;
+    
+}
+.main-bg {
+    background-color: #026873;
+    
+}
+
+.content-index {
+    background-color: #F2D541;
+    border: 6px solid;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 
@@ -40,4 +57,22 @@
 
 .boarder-bot-red {
     border-bottom: 2px solid #F20530;
+}
+
+/* ------------------------------------------------------------- Borders */
+
+.green-btn {
+    border: 2px solid #000;
+    background-color: #004a52;
+    margin: 0 auto;
+    text-shadow: 3px 5px 5px #000;
+}
+
+.green-btn:hover, .green-btn:focus {
+    border: 2px solid #000;
+    background-color: #00502c;
+    color: #F20530 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    text-shadow: 3px 5px 5px #28397d; 
 }
