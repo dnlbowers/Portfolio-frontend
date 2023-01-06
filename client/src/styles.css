@@ -66,12 +66,13 @@
     background-color: #004a52;
     margin: 0 auto;
     text-shadow: 3px 5px 5px #000;
+    font-weight: bold;
 }
 
 .green-btn:hover, .green-btn:focus {
     border: 2px solid #000;
     background-color: #00502c;
-    color: #F20530 !important;
+    color: #Fafafa !important;
     font-size: 1.5rem !important;
     font-weight: bold;
     text-shadow: 3px 5px 5px #28397d; 
