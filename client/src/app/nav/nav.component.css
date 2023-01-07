@@ -11,7 +11,7 @@
     font-size: 2rem; 
 }
 
-.link-light:hover, .link-light:focus {
+.link-light:hover, .link-light:focus, .active {
     color: #F20530 !important;
     font-size: 1.5rem !important;
     font-weight: bold;

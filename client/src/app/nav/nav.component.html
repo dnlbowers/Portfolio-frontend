@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-black boarder-bot-red navbar">
     <div class="container-fluid">
-      <a class="navbar-brand text-yellow blue-text-shadow ms-md-3 fs-3" href="#">
+      <a class="navbar-brand text-yellow blue-text-shadow ms-md-3 fs-3" routerLink="/">
         <fa-icon [icon]="faLaptopCode"></fa-icon>
         <h1 id="title" class="text-red d-inline">  Dev-Bowers </h1> 
         <fa-icon [icon]="faCode"></fa-icon>
@@ -16,20 +16,32 @@
       <div class="navbar-collapse" [class.collapse]="isCollapsed" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link link-light fs-5 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link link-light fs-5" 
+              routerLink="/" 
+                [routerLinkActive]="['active']" 
+                  [routerLinkActiveOptions]="{exact:true}"
+              >
+              Home
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light fs-5" href="#">Link</a>
+            <a class="nav-link link-light fs-5" 
+              [routerLinkActive]="['active']" 
+                [routerLinkActiveOptions]="{exact:true}" 
+                routerLink="/portfolio"
+              >
+              Portfolio
+            </a>
           </li>
           <li ngbDropdown class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle fs-5 link-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
-              Dropdown
+            <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
+              Showcase
             </a>
             <ul ngbDropdownMenu class="dropdown-menu">
-              <li ngbDropdownItem><a class="dropdown-item" href="#">Action</a></li>
-              <li ngbDropdownItem><a class="dropdown-item" href="#">Another action</a></li>
+              <li ngbDropdownItem><a class="dropdown-item">Digital CV</a></li>
+              <li ngbDropdownItem><a class="dropdown-item" href="#">Certificates</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li ngbDropdownItem><a class="dropdown-item" href="#">Something else here</a></li>
+              <li ngbDropdownItem><a class="dropdown-item" href="#">Github</a></li>
             </ul>
           </li>
           <li class="nav-item">
