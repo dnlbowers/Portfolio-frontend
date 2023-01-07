@@ -4,8 +4,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: "", component:HomePageComponent},
-  { path: "portfolio", component: PortfolioComponent},
+  { path: "", component:HomePageComponent, title: "Dev-Bowers - Home"},
+  { path: "portfolio", component: PortfolioComponent, title: "DB - Portfolio Projects" },
+  // { path: "blog", component: PortfolioComponent, title: "DB - Developing Developer Journal Blog" },
 ];
 
 @NgModule({
