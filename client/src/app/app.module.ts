@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectCarouselComponent } from './project-carousel/project-carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     HomePageComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ProjectCarouselComponent
   ],
   imports: [
     BrowserModule,
