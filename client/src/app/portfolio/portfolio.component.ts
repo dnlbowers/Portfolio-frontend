@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Project } from '../_models/project';
 import { ProjectsService } from '../_services/projects.service';
 
 @Component({
@@ -9,11 +10,15 @@ import { ProjectsService } from '../_services/projects.service';
 })
 export class PortfolioComponent implements OnInit{
 
-  projects$: Observable<any> | undefined;
+  projects$: Observable<Project[]> | undefined;
 
   constructor(private projectsService: ProjectsService) { }
   
   ngOnInit():void {
     this.projects$ = this.projectsService.getProjects();
+    console.log(this.projects$);
+    this.projects$.forEach(project => {
+      console.log(project);
+    });
   }
 }

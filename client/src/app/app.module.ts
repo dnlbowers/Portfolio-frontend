@@ -20,7 +20,7 @@ import { ProjectCarouselComponent } from './project-carousel/project-carousel.co
     HomePageComponent,
     FooterComponent,
     PortfolioComponent,
-    ProjectCarouselComponent
+    ProjectCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,7 @@ import { ProjectCarouselComponent } from './project-carousel/project-carousel.co
     BrowserAnimationsModule,
     FontAwesomeModule,
     HttpClientModule,
+    
   ],
   
   providers: [],
