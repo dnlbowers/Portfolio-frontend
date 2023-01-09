@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectCarouselComponent } from './project-carousel/project-carousel.component';
+// import { CloudinaryModule } from '@cloudinary/ng';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { ProjectCarouselComponent } from './project-carousel/project-carousel.co
     BrowserAnimationsModule,
     FontAwesomeModule,
     HttpClientModule,
-    
+    // CloudinaryModule,
   ],
   
   providers: [],

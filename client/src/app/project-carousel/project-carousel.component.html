@@ -1,15 +1,2 @@
-<div *ngFor="let project of projects |keyvalue">{{project.key}}:  {{project.value}}</div>
-<!-- <ngb-carousel *ngIf="projects">
-	<ng-template ngbSlide *ngFor="let project of projects |keyvalue">
-		<div *ngIF(project.key='screenshot') class="picsum-img-wrapper">
-			<img [src]="project.value" alt="Random first slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>First slide label</h3>
-			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-		</div>
-	</ng-template>
-	
-</ngb-carousel> -->
+<div *ngFor="let project of projects|async">{{project.title}}: {{project.screenshot}}</div>
 
-<!-- {{projects.name}} -->
