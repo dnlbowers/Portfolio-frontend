@@ -16,9 +16,5 @@ export class PortfolioComponent implements OnInit{
   
   ngOnInit():void {
     this.projects$ = this.projectsService.getProjects();
-    console.log(this.projects$);
-    this.projects$.forEach(project => {
-      console.log(project);
-    });
   }
 }

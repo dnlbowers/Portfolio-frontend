@@ -11,6 +11,7 @@ export class ProjectsService {
 
   baseUrl:string = "http://localhost:8000/api/";
   projects: Project[] = [];
+  imageUrl:string = "https://res.cloudinary.com/df4m8hva5/";
 
   constructor(private http: HttpClient) { }
 
@@ -19,8 +20,15 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.baseUrl + "projects").pipe(
       map(projects => {
         this.projects = projects;
+        this.createFullImageUrl()
         return projects;
       })
     );
+  }
+
+  createFullImageUrl() {
+    this.projects.forEach(project => {
+      project.screenshot = this.imageUrl.concat( project.screenshot);
+    })
   }
 }
