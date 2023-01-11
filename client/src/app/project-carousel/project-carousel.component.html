@@ -3,18 +3,19 @@
 	[interval]="500"
     [unpauseOnArrow]="unpauseOnArrow"
 	[pauseOnHover]="pauseOnHover"
+	[showNavigationIndicators]="showNavigationIndicators"
 	(slide)="onSlide($event)"
 
 	<ng-template ngbSlide *ngFor="let project of projects|async">
 		<div class="picsum-img-wrapper">
-			<img class="w-100" [src]=[project.screenshot] alt=[project.title]>
+			<img class="w-100 rounded-4 border border-dark" [src]=[project.screenshot] alt=[project.title]>
 		</div>
-		<div class="carousel-caption">
+		<div class="carousel-caption pb-0">
             <a [href]=[project.hosted_url] target="_blank" rel="noopener" aria-label="Opens Modern buddhism project in new tab">
-                <h3 class="btn btn-lg btn-green text-light">{{project.title}}</h3>
+                <h3 class="btn btn-lg btn-blue btn-custom text-light">{{project.title}}</h3>
             </a>
 		</div>
 	</ng-template>
-
+</ngb-carousel>
 
 

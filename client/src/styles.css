@@ -59,21 +59,36 @@
     border-bottom: 2px solid #F20530;
 }
 
-/* ------------------------------------------------------------- Borders */
+/* ------------------------------------------------------------- Buttons*/
 
 .btn-green {
-    border: 2px solid #000;
     background-color: #004a52;
+
+}
+
+.btn-green:hover, .btn-green:focus {
+    background-color: #00502c;
+    text-shadow: 3px 5px 5px #28397d; 
+}
+
+.btn-blue {
+    background-color: #28397d
+}
+
+.btn-blue:hover, .btn-blue:focus {
+    background-color: #213480;
+    text-shadow: 3px 5px 5px #F2D541; 
+}
+
+.btn-custom {
+    border: 3px solid #000;
     margin: 0 auto;
     text-shadow: 3px 5px 5px #000;
     font-weight: bold;
 }
 
-.btn-green:hover, .btn-green:focus {
-    border: 2px solid #000;
-    background-color: #00502c;
+.btn-custom:hover, .btn-custom:focus {
     color: #Fafafa !important;
     font-size: 1.5rem !important;
     font-weight: bold;
-    text-shadow: 3px 5px 5px #28397d; 
 }
