@@ -1,6 +1,7 @@
 /* -------------------------------------------------------------- Navbar */
 .navbar {
     min-height: 144px;
+    margin-bottom: auto;
 }
 
 #title {
