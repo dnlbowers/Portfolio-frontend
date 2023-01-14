@@ -25,6 +25,11 @@ body {
     text-shadow: -2px 4px #28397d; 
 }
 
+.black-text-shadow {
+    text-shadow: -2px 4px #000;
+}
+
+
 
 /* --------------------------------------------- Background colors */
 

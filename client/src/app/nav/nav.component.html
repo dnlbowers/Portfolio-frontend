@@ -37,11 +37,24 @@
             <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
               Showcase
             </a>
-            <ul ngbDropdownMenu class="dropdown-menu">
-              <li ngbDropdownItem><a class="dropdown-item">Digital CV</a></li>
-              <li ngbDropdownItem><a class="dropdown-item" href="#">Certificates</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li ngbDropdownItem><a class="dropdown-item" href="#">Github</a></li>
+            <ul ngbDropdownMenu class="dropdown-menu p-0 border border-dark border-3 overflow-hidden">
+              <li ngbDropdownItem class="p-0">
+                <a class="dropdown-item text-light fw-bolder drop-bg-1 p-3 fs-5 black-text-shadow">
+                  Digital CV
+                </a>
+              </li>
+              <li ngbDropdownItem class="p-0">
+                <a class="dropdown-item text-light fw-bolder drop-bg-2 p-3 fs-5 black-text-shadow border border-dark border-3 border-start-0 border-end-0" href="#">
+                  Certificates
+                </a>
+              </li>
+              <li ngbDropdownItem class="p-0">
+                <a class="dropdown-item text-light fw-bolder drop-bg-3 p-3 fs-5 black-text-shadow" 
+                  href="https://github.com/dnlbowers" aria-label="Check out my profile on github" 
+                    rel="noopener" target="_blank">
+                    Github
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
