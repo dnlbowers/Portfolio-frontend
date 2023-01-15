@@ -33,8 +33,8 @@
               Portfolio
             </a>
           </li>
-          <li ngbDropdown class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
+          <li ngbDropdown class="nav-item dropdown" routerLink="/showcase">
+            <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" [routerLinkActive]="['active']" ngbDropdownToggle>
               Showcase
             </a>
             <ul ngbDropdownMenu class="dropdown-menu p-0 border border-dark border-3 overflow-hidden">
@@ -44,7 +44,10 @@
                 </a>
               </li>
               <li ngbDropdownItem class="p-0">
-                <a class="dropdown-item text-light fw-bolder drop-bg-2 p-3 fs-5 black-text-shadow border border-dark border-3 border-start-0 border-end-0" href="#">
+                <a class="dropdown-item text-light fw-bolder drop-bg-2 p-3 fs-5 black-text-shadow border border-dark border-3 border-start-0 border-end-0" href="#"
+                  [routerLinkActive]="['active']" 
+                  [routerLinkActiveOptions]="{exact:true}" 
+                  routerLink="/showcase/certifications">
                   Certificates
                 </a>
               </li>
