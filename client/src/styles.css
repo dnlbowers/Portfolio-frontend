@@ -77,8 +77,9 @@ body {
 }
 
 .btn-green:hover, .btn-green:focus {
-    background-color: #00502c;
+    background-color: #004a52;
     text-shadow: 3px 5px 5px #28397d; 
+    border: 3px solid #000;
 }
 
 .btn-blue {
@@ -88,6 +89,7 @@ body {
 .btn-blue:hover, .btn-blue:focus {
     background-color: #213480;
     text-shadow: 3px 5px 5px #F2D541; 
+    border: 3px solid #000;
 }
 
 .btn-custom {
