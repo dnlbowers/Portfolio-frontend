@@ -13,6 +13,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectCarouselComponent } from './project-carousel/project-carousel.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CertificationsComponent } from './certifications/certifications.compone
     PortfolioComponent,
     ProjectCarouselComponent,
     CertificationsComponent,
+    CurriculumVitaeComponent,
   ],
   imports: [
     BrowserModule,
