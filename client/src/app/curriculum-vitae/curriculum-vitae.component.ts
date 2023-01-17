@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./curriculum-vitae.component.css']
 })
 export class CurriculumVitaeComponent {
+  active = 1;
 
 }

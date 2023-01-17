@@ -12,18 +12,24 @@
                 </div>
                 <div class="row g-0">
                     <div class="col-12 text-center">
-                        <ul id="nav" class="list-inline row g-0">
-                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 bg-green p-3">
-                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold">Resume</a>
+                        <ul id="nav" ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs list-inline row g-0">
+                            <li [ngbNavItem]="1" class="col-6 col-sm-3 border border-dark border-3 border-top-0 bg-green">
+                                <a ngbNavLink href="#" class="text-light text-decoration-none fs-4 fw-bold p-3">Resume</a>
+                                <ng-template ngbNavContent>
+                                    <p>Test resume</p>
+                                </ng-template>
                             </li>
-                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-blue p-3">
-                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold">Interests</a>
+                            <li [ngbNavItem]="2" class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-blue">
+                                <a ngbNavLink href="#" class="text-light text-decoration-none fs-4 fw-bold p-3">Interests</a>
+                                <ng-template ngbNavContent>
+                                    <p>test interests</p>
+                                </ng-template>
                             </li>
-                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-red p-3">
-                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold">GitHub</a>
+                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-red">
+                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold p-3">GitHub</a>
                             </li>
-                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-black p-3">
-                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold" target="_blank">Download CV</a>
+                            <li class="col-6 col-sm-3 border border-dark border-3 border-top-0 border-start-0 bg-black">
+                                <a href="#" class="text-light text-decoration-none fs-4 fw-bold p-3" target="_blank">Download CV</a>
                             </li>
                         </ul>
                     </div>
