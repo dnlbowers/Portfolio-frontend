@@ -28,10 +28,15 @@ li > a {
     
 }
 
+.nav-tabs .nav-link {
+    border-radius: 0 !important;
+}
+
 .active {
-    /* color: #F2D541 !important; */
+    background-color: inherit !important;
     font-size: 1.5rem !important;
     font-weight: bold;
+    border-radius: 0;
     /* text-shadow: -2px 4px #F2D541; */
     /* border-left: 2px solid #000;
     border-right: 2px solid #000a;
