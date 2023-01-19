@@ -16,7 +16,7 @@
                             <li [ngbNavItem]="1" class="col-6 col-sm-3 bg-black border border-dark border-2">
                                 <a (click)="headerColor = 'bg-black'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Resume</a>
                                 <ng-template ngbNavContent>
-                                    <p>Test resume</p>
+                                    <app-resume [headerColor]="headerColor"></app-resume>
                                 </ng-template>
                             </li>
                             <li [ngbNavItem]="2" class="col-6 col-sm-3 bg-blue border border-dark border-2">

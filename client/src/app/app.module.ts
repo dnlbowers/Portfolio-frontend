@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectCarouselComponent } from './project-carousel/project-carousel.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.co
     ProjectCarouselComponent,
     CertificationsComponent,
     CurriculumVitaeComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
