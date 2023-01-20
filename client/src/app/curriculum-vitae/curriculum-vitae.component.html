@@ -1,10 +1,10 @@
 <main class="content-index container-fluid container-lg my-5">
-    <div class=" d-flex border border-dark border-2 border-bottom-0 row g-0 mx-auto">
-            <div class="col-md-4 text-center order-2 order-lg-1" [ngClass]="headerColor">
+    <div class=" d-flex row g-0 mx-auto">
+            <div class="col-md-4 text-center order-2 order-md-1 boarder border-dark border-5" [ngClass]="headerColor">
                 <img class="img-fluid" src="https://res.cloudinary.com/df4m8hva5/image/upload/v1643327169/jk1pf9wyzpicqcyzklby.jpg" alt="Placeholder">
             </div>
-            <div class="col-md-8 d-flex flex-column justify-content-evenly order-1 order-lg-2">
-                <div [ngClass]="headerColor" class="row g-0 fw-bold text-white h-100">
+            <div class="col-md-8 d-flex flex-column justify-content-evenly order-1 order-md-2">
+                <div [ngClass]="headerColor" class="row g-0 fw-bold text-white h-100 border border-dark border-5">
                     <div class="col ps-md-5 d-flex align-item-center align-item-md-start justify-content-center flex-column text-center text-md-start">
                         <h2 class="fs-1 fw-bold pb-2 pt-3">David Bowers</h2>
                         <h3 class="fs-4 pb-3">Full Stack Developer</h3>
@@ -13,25 +13,25 @@
                 <div class="row g-0">
                     <nav class="col-12 text-center">
                         <ul id="nav" ngbNav #nav="ngbNav" [(activeId)]="active" class="list-inline row g-0 nav-tabs">
-                            <li [ngbNavItem]="1" class="col-6 col-sm-3 bg-black border border-dark border-2">
+                            <li [ngbNavItem]="1" class="col-6 col-sm-3 bg-black border border-dark">
                                 <a (click)="headerColor = 'bg-black'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Resume</a>
                                 <ng-template ngbNavContent>
                                     <app-resume [headerColor]="headerColor"></app-resume>
                                 </ng-template>
                             </li>
-                            <li [ngbNavItem]="2" class="col-6 col-sm-3 bg-blue border border-dark border-2">
+                            <li [ngbNavItem]="2" class="col-6 col-sm-3 bg-blue border border-dark">
                                 <a (click)="headerColor = 'bg-blue'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Interests</a>
                                 <ng-template ngbNavContent>
-                                    <p>test interests</p>
+                                    <app-interests [headerColor]="headerColor"></app-interests>
                                 </ng-template>
                             </li>
-                            <li [ngbNavItem]="3" class="col-6 col-sm-3 bg-green border border-dark border-2">
+                            <li [ngbNavItem]="3" class="col-6 col-sm-3 bg-green border border-dark">
                                 <a (click)="headerColor = 'bg-green'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">GitHub</a>
                                 <ng-template ngbNavContent>
                                     <p>test GitHub</p>
                                 </ng-template>
                             </li>
-                            <li [ngbNavItem]="4" class="col-6 col-sm-3 bg-red border border-dark border-2">
+                            <li [ngbNavItem]="4" class="col-6 col-sm-3 bg-red border border-dark">
                                 <a ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3" target="_blank">
                                     CV
                                     <fa-icon [icon]="faDownload" 

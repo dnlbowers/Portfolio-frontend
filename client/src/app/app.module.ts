@@ -15,6 +15,7 @@ import { ProjectCarouselComponent } from './project-carousel/project-carousel.co
 import { CertificationsComponent } from './certifications/certifications.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 import { ResumeComponent } from './resume/resume.component';
+import { InterestsComponent } from './interests/interests.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ResumeComponent } from './resume/resume.component';
     CertificationsComponent,
     CurriculumVitaeComponent,
     ResumeComponent,
+    InterestsComponent,
   ],
   imports: [
     BrowserModule,
