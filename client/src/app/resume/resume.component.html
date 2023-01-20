@@ -1,6 +1,6 @@
-<div class="row g-0">
-    <div [ngClass]="headerColor" class="col-md-4 section-column text-light">
-        <div class="row g-0">
+<div class="row g-0 d-flex">
+    <div [ngClass]="headerColor" class="col-lg-4 order-2 order-lg-1 section-column text-light">
+        <div class=" row g-0">
             <div class="col-12">
                 <h3 class="mt-4 mb-2 text-uppercase text-center">
                     work history
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-8 bg-light section-column border border-dark">
+    <div class="col-lg-8 bg-light section-column border border-dark  order-1 order-lg-2">
         <div class="row g-0">
             <div class="col">
                 <h3 class="mt-4 mb-2 text-uppercase">my skills</h3>
@@ -67,44 +67,44 @@
         </div>
 
         <!-- start from here -->
-        
         <div class="row progress-section">
             <div class="col">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 90%;">
-                        <span class="sr-only">90% complete</span>
-                    </div>
-                    <span class="progress-type">HTML / HTML 5</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 80%;">
-                        <span class="sr-only">80% complete</span>
-                    </div>
-                    <span class="progress-type">CSS / CSS3</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 70%;">
-                        <span class="sr-only">70% complete</span>
-                    </div>
-                    <span class="progress-type">Javascript / jQuery</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 80%;">
-                        <span class="sr-only">80% complete</span>
-                    </div>
-                    <span class="progress-type">Django / Python</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                        aria-valuemax="100" style="width: 80%;">
-                        <span class="sr-only">80% complete</span>
-                    </div>
-                    <span class="progress-type">SQL / NoSQL</span>
-                </div>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning HTML / HTML5'" 
+                        type="primary"  [value]="95">
+                            <b>HTML / HTML5</b>
+                    </ngb-progressbar>
+                </p>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning CSS / Bootstrap'" 
+                        type="info" [value]="85">
+                            <b>CSS / Bootstrap</b>
+                    </ngb-progressbar>
+                </p>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Javascript / JQuery / Jest / Postman'" 
+                        type="warning" [value]="85">
+                            <b>Javascript / JQuery / Jest / Postman</b>
+                    </ngb-progressbar>
+                </p>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF / Python / Unittest'" 
+                        type="success" [value]="90">
+                            <b>Django / DRF / Python / Unittest</b>
+                    </ngb-progressbar>
+                </p>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning TypeScript/Angular'" 
+                        type="danger" [value]="80">
+                            <b>TypeScript / Angular</b>
+                    </ngb-progressbar>
+                </p>
+                <p class="border border-dark rounded-pill">
+                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning SQL / ORM / NoSQL'" 
+                        type="dark" [value]="90">
+                            <b>SQL / ORM / NoSQL</b>
+                    </ngb-progressbar>
+                </p>
             </div>
         </div>
     </div>
