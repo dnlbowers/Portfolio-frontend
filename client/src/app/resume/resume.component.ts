@@ -7,8 +7,10 @@ import { faGears, faTv } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
-   @Input()
-  headerColor!: string
+  
   faTv = faTv
   faGears = faGears
+
+  @Input() headerColor!: string;
+
 }

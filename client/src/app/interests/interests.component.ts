@@ -13,5 +13,5 @@ export class InterestsComponent {
   faChildReaching = faChildReaching;
   faHandFist = faHandFist;
   
-  @Input() headerColor!: string
+  @Input() headerColor!: string;
 }

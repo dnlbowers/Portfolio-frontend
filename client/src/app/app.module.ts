@@ -16,6 +16,7 @@ import { CertificationsComponent } from './certifications/certifications.compone
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
 import { ResumeComponent } from './resume/resume.component';
 import { InterestsComponent } from './interests/interests.component';
+import { GithubReposComponent } from './github-repos/github-repos.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { InterestsComponent } from './interests/interests.component';
     CurriculumVitaeComponent,
     ResumeComponent,
     InterestsComponent,
+    GithubReposComponent,
   ],
   imports: [
     BrowserModule,

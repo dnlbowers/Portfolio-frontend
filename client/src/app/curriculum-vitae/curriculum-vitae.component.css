@@ -3,11 +3,11 @@
 }
 
 .bg-black {
-    background-color: #0D0500;
+    background-color: #0D0500 !important;
 }
 
 .bg-green {
-    background-color: #026873;
+    background-color: #026873 !important;
     
 }
 

@@ -28,7 +28,7 @@
                             <li [ngbNavItem]="3" class="col-6 col-sm-3 bg-green border border-dark">
                                 <a (click)="headerColor = 'bg-green'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">GitHub</a>
                                 <ng-template ngbNavContent>
-                                    <p>test GitHub</p>
+                                    <app-github-repos [headerColor]="headerColor"></app-github-repos>
                                 </ng-template>
                             </li>
                             <li [ngbNavItem]="4" class="col-6 col-sm-3 bg-red border border-dark">
