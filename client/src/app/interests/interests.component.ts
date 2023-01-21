@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faBookOpen, faChildReaching, faHandFist, faYinYang } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-interests',
@@ -6,6 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./interests.component.css']
 })
 export class InterestsComponent {
-  @Input()
-  headerColor!: string
+  
+  faBookOpen = faBookOpen;
+  faYinYang = faYinYang;
+  faChildReaching = faChildReaching;
+  faHandFist = faHandFist;
+  
+  @Input() headerColor!: string
 }

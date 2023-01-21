@@ -1,7 +1,7 @@
 .section-column {
     display: table-cell;
     padding: 0 30px 30px;
-    /* float: none; */
+    float: none;
 }
 
 .timeline-item {

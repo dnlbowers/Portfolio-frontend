@@ -35,7 +35,7 @@
         </div>
         <div class="row g-0 my-5">
             <div class="col-10 offset-1 offset-sm-0 col-lg-6">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-2">
                         <fa-icon [icon]="faTv" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon>
                     </div>
@@ -67,41 +67,41 @@
         </div>
 
         <div class="row m-4 p-2">
-            <div class="col">
+            <div class="col d-flex flex-column">
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning HTML / HTML5'" 
                         type="primary"  [value]="95">
-                            <b>HTML / HTML5</b>
+                            <b class="fs-6">HTML / HTML5</b>
                     </ngb-progressbar>
                 </p>
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning CSS / Bootstrap'" 
                         type="info" [value]="85">
-                            <b>CSS / Bootstrap</b>
+                            <b class="fs-6">CSS / Bootstrap</b>
                     </ngb-progressbar>
                 </p>
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Javascript / JQuery / Jest / Postman'" 
                         type="warning" [value]="85">
-                            <b>Javascript / JQuery / Jest / Postman</b>
+                            <b class="fs-6">Javascript / JQuery / Jest / Postman</b>
                     </ngb-progressbar>
                 </p>
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF / Python / Unittest'" 
                         type="success" [value]="90">
-                            <b>Django / DRF / Python / Unittest</b>
+                            <b class="fs-6">Django / DRF / Python / Unittest</b>
                     </ngb-progressbar>
                 </p>
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning TypeScript/Angular'" 
                         type="danger" [value]="80">
-                            <b>TypeScript / Angular</b>
+                            <b class="fs-6">TypeScript / Angular</b>
                     </ngb-progressbar>
                 </p>
                 <p class="border border-dark rounded-pill">
                     <ngb-progressbar [ariaLabel]="'current percentage of time using / learning SQL / ORM / NoSQL'" 
                         type="dark" [value]="90">
-                            <b>SQL / ORM / NoSQL</b>
+                            <b class="fs-6">SQL / ORM / NoSQL</b>
                     </ngb-progressbar>
                 </p>
             </div>

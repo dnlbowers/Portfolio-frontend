@@ -1,13 +1,13 @@
-<ngb-carousel *ngIf="projects">
+<ngb-carousel *ngIf="projects" class="carousel-dark">
     #carousel
-	[interval]="500"
+	[interval]="300"
     [unpauseOnArrow]="unpauseOnArrow"
 	[pauseOnHover]="pauseOnHover"
 	[showNavigationIndicators]="showNavigationIndicators"
 	(slide)="onSlide($event)"
 
 	<ng-template ngbSlide *ngFor="let project of projects|async">
-		<div class="picsum-img-wrapper rounded-4 border border-3 border-dark">
+		<div class="picsum-img-wrapper rounded-4 border border-3 border-dark arousel carousel-dark slide">
 			<img class="w-100 rounded-4" [src]=[project.screenshot] alt=[project.title]>
 		</div>
 		<div class="carousel-caption pb-0">
