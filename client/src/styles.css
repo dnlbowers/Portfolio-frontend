@@ -41,6 +41,21 @@ body {
     background-color: #0D0500;
 }
 
+.bg-green {
+    background-color: #026873 !important;
+}
+
+.bg-red {
+    background-color: #F20530;
+    
+}
+
+.bg-yellow {
+    background-color: #F2D541;
+    
+}
+
+
 .hero-bg {
     background-color: #026873;
     
