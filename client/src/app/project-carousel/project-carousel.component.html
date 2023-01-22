@@ -10,9 +10,9 @@
 		<div class="picsum-img-wrapper rounded-4 border border-3 border-dark arousel carousel-dark slide">
 			<img class="w-100 rounded-4" [src]=[project.screenshot] alt=[project.title]>
 		</div>
-		<div class="carousel-caption pb-0">
-            <a [href]=[project.hosted_url] target="_blank" rel="noopener" aria-label="Opens Modern buddhism project in new tab">
-                <h3 class="btn btn-lg btn-green btn-custom text-light">{{project.title}}</h3>
+		<div class="carousel-caption">
+            <a [href]=[project.hosted_url] target="_blank" rel="noopener" [attr.aria-label]="'Opens ' + project.title + ' in new tab'">
+				<h3 class="btn btn-lg btn-green btn-custom text-light">{{project.title}}</h3>
             </a>
 		</div>
 	</ng-template>

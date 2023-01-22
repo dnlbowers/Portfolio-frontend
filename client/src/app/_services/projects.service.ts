@@ -28,7 +28,7 @@ export class ProjectsService {
 
   createFullImageUrl() {
     this.projects.forEach(project => {
-      project.screenshot = this.imageUrl.concat( project.screenshot);
+      project.screenshot = this.imageUrl.concat(project.screenshot);
     })
   }
 }

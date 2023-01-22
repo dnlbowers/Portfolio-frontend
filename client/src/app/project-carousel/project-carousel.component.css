@@ -1,4 +1,9 @@
-.carousel-caption{
-    position:absolute;
-    bottom: 15px;
+::ng-deep .carousel-indicators button.active {
+    background: linear-gradient(to right, #BF935f, #fcf6Ba, #Fbf587, #AA771c) !important;
+    border: 1px solid #28397d;
+    margin-top: 10px;
+}
+
+::ng-deep .carousel-indicators button {
+    opacity: 1 !important;
 }
