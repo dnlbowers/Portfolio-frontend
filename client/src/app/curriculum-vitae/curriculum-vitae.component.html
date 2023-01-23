@@ -1,6 +1,6 @@
 <main class="content-index container-fluid container-lg my-5">
     <div class=" d-flex row g-0 mx-auto">
-            <div class="col-md-4 text-center order-2 order-md-1 boarder border-dark border-5" [ngClass]="headerColor">
+            <div class="col-md-4 text-center order-2 order-md-1 border border-dark border-3" [ngClass]="headerColor">
                 <img class="img-fluid" src="https://res.cloudinary.com/df4m8hva5/image/upload/v1643327169/jk1pf9wyzpicqcyzklby.jpg" alt="Placeholder">
             </div>
             <div class="col-md-8 d-flex flex-column justify-content-evenly order-1 order-md-2">
@@ -12,7 +12,7 @@
                 </div>
                 <div class="row g-0">
                     <nav class="col-12 text-center">
-                        <ul id="nav" ngbNav #nav="ngbNav" [(activeId)]="active" class="list-inline row g-0 nav-tabs">
+                        <ul id="nav" ngbNav #nav="ngbNav" [(activeId)]="active" class="list-inline row g-0 nav-tabs border border-dark">
                             <li [ngbNavItem]="1" class="col-6 col-sm-3 bg-black border border-dark">
                                 <a (click)="headerColor = 'bg-black'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Resume</a>
                                 <ng-template ngbNavContent>
