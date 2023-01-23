@@ -1,12 +1,32 @@
 <div class="row g-0 d-flex">
-    <div [ngClass]="headerColor" class="col-lg-4 order-2 order-lg-1 section-column text-light border border-dark border-5">
+    <div [ngClass]="headerColor" class="col-lg-4 order-2 order-lg-1 section-column text-light border border-dark border-5 px-2">
         <div class="row g-0">
             <div class="col-12">
                 <h3 class="mt-4 mb-2 text-uppercase text-center">
                     The real me...
                 </h3>
-                <div *ngIf="profile">
-                    {{profile.name}}
+                <div class="text-center" *ngIf="profile">
+                    <div class="p-2">
+                        <img class="rounded-circle img-fluid border border-dark" [src]="[profile.avatar_url]" alt="">
+                    </div>
+                    <p class="mt-3 fs-3"><span class="fw-bold text-capitalize">{{profile.login}}</span></p>
+                    <p>
+                        <span class="fw-bold text-capitalize">
+                            <fa-icon [icon]="faUserSecret" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                            followers: 
+                        </span> {{profile.followers}} 
+                        <span class="fw-bold text-capitalize ms-3">
+                            <fa-icon [icon]="faCodeCommit" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                            public repos: 
+                        </span> {{profile.public_repos}}
+                    </p>
+                    <p>
+                        <a class="text-light text-decoration-none" [href]="[profile.html_url]" 
+                            target="_blank" rel="noopener" aria-label="Takes you to my github profile in a new tab">
+                                {{profile.html_url}}
+                        </a>
+                    </p>
+                    <p class="text-start p-3">{{profile.bio}}</p>
                 </div>
             </div>
         </div>
@@ -21,7 +41,7 @@
             <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
                 <div class="row g-0">
                     <div class="col-2">
-                        <!-- <fa-icon [icon]="faBookOpen" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
+                        <!-- <fa-icon [icon]="faUserSecret" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
                     </div>
                     <div class="col-10">
                         <h4 class="text-uppercase">Reading</h4>

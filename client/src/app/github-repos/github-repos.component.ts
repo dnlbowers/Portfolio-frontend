@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { faCodeCommit, faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { GithubProfile } from '../_models/github-profile';
 import { GithubService } from '../_services/github.service';
 
@@ -8,6 +9,9 @@ import { GithubService } from '../_services/github.service';
   styleUrls: ['./github-repos.component.css']
 })
 export class GithubReposComponent implements OnInit {
+  
+  faUserSecret = faUserSecret;
+  faCodeCommit = faCodeCommit;
   
   @Input() headerColor!: string;
 
