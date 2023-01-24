@@ -7,7 +7,6 @@
 .timeline-item {
     padding: 4em 2em 0em 2em;
     position: relative;
-    color: #fafafa;
     border-left: 1px solid;
 
 }
@@ -39,6 +38,20 @@
     left: -6px;
     border-radius: 12px;
     content: ' ';
-    background-color: #fafafa;
+    background-color: #000;
 }
 
+
+@media only screen and (min-width: 992px) {
+    .timeline-item:after {
+        width: 12px;
+        height: 12px;
+        display: block;
+        top: 2.4em;
+        position: absolute;
+        left: -6px;
+        border-radius: 12px;
+        content: ' ';
+        background-color: #fafafa;
+    }
+}
