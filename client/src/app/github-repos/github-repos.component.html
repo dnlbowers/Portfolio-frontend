@@ -1,38 +1,36 @@
 <div class="row g-0 d-flex">
-    <div [ngClass]="headerColor" class="col-lg-4 text-light border border-dark border-5 border-top-0 px-2">
+    <div [ngClass]="headerColor" class="col-lg-4 text-light border border-dark border-5 border-top-0">
         <div class="row g-0">
             <div class="col-12">
-                <h3 class="mt-4 mb-2 text-uppercase text-center">
+                <h3 class="mt-4 mb-2 text-uppercase text-center fw-bold">
                     The real me...
                 </h3>
                 <div class="text-center" *ngIf="profile">
                     <div class="p-2">
-                        <img class="rounded-circle img-fluid border border-dark" [src]="[profile.avatar_url]" alt="">
+                        <img class="rounded-circle img-fluid border border-dark" [src]="[profile.avatar_url]" alt="Look its me in my clark kent disguise">
                     </div>
-                    <p class="mt-3 fs-3"><span class="fw-bold text-capitalize">{{profile.login}}</span></p>
-                    <p>
-                        <span class="fw-bold text-capitalize">
-                            <fa-icon [icon]="faUserSecret" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
-                            followers: 
-                        </span> {{profile.followers}} 
-                        <span class="fw-bold text-capitalize ms-3">
-                            <fa-icon [icon]="faCodeCommit" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
-                            public repos: 
-                        </span> {{profile.public_repos}}
-                    </p>
+                    <p class="mt-3 fs-3"><span class="fw-bold">@{{profile.login}}</span></p>
                     <p>
                         <a class="text-light text-decoration-none" [href]="[profile.html_url]" 
                             target="_blank" rel="noopener" aria-label="Takes you to my github profile in a new tab">
                                 {{profile.html_url}}
                         </a>
                     </p>
-                    <p class="text-start px-3">
+                    <p class="fw-bold text-capitalize">
+                        <fa-icon [icon]="faCodeCommit" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                        public repos: {{profile.public_repos}}
+                    </p> 
+                    <p class="fw-bold text-capitalize">
+                        <fa-icon [icon]="faUserSecret" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                        followers: {{profile.followers}} 
+                    </p> 
+                    <p class="text-justify text-lg-start px-4">
                         Hey there! I'm a Core Ops Engineer by day and a coder by night. I specialize in web development (Ecommerce), 
                         but I love experimenting with different languages and technologies. Being a full-stack developer with a diploma in 
                         software development I have experience in Python, HTML, CSS, Django, Flask, JavaScript, jQuery, Git and more. I've 
                         been known to debate with myself "code or sleep," and usually, code wins.
                     </p>
-                    <p class="text-start px-3">                            
+                    <p class="text-justify text-lg-start px-4">                            
                         Feel free to check out my repos, and let's connect if you want to hire me, collaborate or simplychat about code!
                     </p>
                 </div>
@@ -42,81 +40,29 @@
     <div class="col-lg-8 bg-light border border-dark border-5 border-top-0">
         <div class="row g-0">
             <div class="col">
-                <h3 class="mt-4 mb-2 text-uppercase text-center text-lg-start">Code bases for my Portfolio projects</h3>
+                <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">How I spend my Free time</h3>
             </div>
         </div>
-        <div class="row g-0 my-5">
-            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+        <div class="row g-0">
+            <div class="col-12 col-md-6 mb-3">
                 <div class="row g-0">
-                    <div class="col-2">
-                        <!-- <fa-icon [icon]="faUserSecret" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
-                    </div>
-                    <div class="col-10">
-                        <h4 class="text-uppercase">Reading</h4>
-                        <p>
-                            Coding Grace are a group of developers based in Ireland who love to code and do
-                            other geeky and not necessarily crafty activities. Some of us code full-time, or
-                            just for fun (or both). We have people who are part of other technical user groups
-                            such as
-                            Dublin ALT.NET, GameCraft, Python Ireland, Ruby Ireland and more.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
-                <div class="row">
-                    <div class="col-2">
-                        <!-- <fa-icon [icon]="faYinYang" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
-                    </div>
-                    <div class="col-10">
-                        <h4 class="text-uppercase">Meditating</h4>
-                        <p>
-                            Django Girls is a non-profit organization and a community that empowers and helps
-                            women to organize free, one-day programming workshops by providing tools, resources
-                            and support. We are a volunteer run organization with hundreds of people
-                            contributing
-                            to bring more amazing women into the world of technology.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
-                <div class="row">
-                    <div class="col-2">
-                        <!-- <fa-icon [icon]="faChildReaching" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
-                    </div>
-                    <div class="col-10">
-                        <h4 class="text-uppercase">Being a Gigantic Man child</h4>
-                        <p>
-                            Our meetup is an event where web designers and developers can come together to learn
-                            from and teach each other about emerging technologies. While speakers at Full Stack
-                            focus primarily on angularjs, react, node, hapiJS, espress, plain ole' JavaScript,
-                            HTML, and CSS, we encourage all local web professionals to join us for vivid
-                            discussions around technology across the stack in any language.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
-                <div class="row">
-                    <div class="col-2">
-                        <!-- <fa-icon [icon]="faHandFist" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon> -->
-                    </div>
-                    <div class="col-10">
-                        <h4 class="text-uppercase">Martials arts</h4>
-                        <p>
-                            IoT Nation's mission is to inspire, engage, and connect entrepreneurs, investors,
-                            professionals, & enthusiasts worldwide who are active in the Internet of Things
-                            (IoT). This group is for professionals and enthusiasts in the Internet of Things. We
-                            welcome
-                            those who want to learn about this emerging field which is fascinating as IoT makes
-                            use of a diverse range of technologies and has the promise to impact a vast number
-                            of vertical markets.
+                    <!-- <div class="col-2">
+                        <fa-icon [icon]="faBookOpen" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true" [fixedWidth]="true"></fa-icon>
+                    </div> -->
+                    <div class="col-12">
+                        <h4 class="text-uppercase text-center text-md-start px-4">
+                            <!-- <fa-icon [icon]="faBookOpen" [styles]="{'color': '#F20530'}" aria-hidden="true" [fixedWidth]="true" class="pe-1"></fa-icon>  -->
+                            Reading
+                        </h4>
+                        <p class="px-4 text-justify">
+                            When I'm not coding, you can find often me reading fantasy novels to expand my imagination and 
+                            non-fiction to expand my logical thought patterns, whilst challenging my own points of view. 
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 
