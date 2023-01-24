@@ -29,6 +29,10 @@ body {
     text-shadow: -2px 4px #000;
 }
 
+/* -------------------------------------------------------- Text styling */
+.text-justify {
+    text-align: justify;
+}
 
 
 /* --------------------------------------------- Background colors */
