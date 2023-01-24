@@ -1,4 +1,4 @@
-<main class="content-index container-fluid container-lg my-5">
+<main class="content-index container my-5">
     <div class=" d-flex row g-0 mx-auto">
             <div class="col-md-4 text-center order-2 order-md-1 border border-dark border-3" [ngClass]="headerColor">
                 <img class="img-fluid" src="https://res.cloudinary.com/df4m8hva5/image/upload/v1643327169/jk1pf9wyzpicqcyzklby.jpg" alt="Placeholder">
@@ -19,16 +19,16 @@
                                     <app-resume [headerColor]="headerColor"></app-resume>
                                 </ng-template>
                             </li>
-                            <li [ngbNavItem]="2" class="col-6 col-sm-3 bg-blue border border-dark">
-                                <a (click)="headerColor = 'bg-blue'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Interests</a>
-                                <ng-template ngbNavContent>
-                                    <app-interests [headerColor]="headerColor"></app-interests>
-                                </ng-template>
-                            </li>
-                            <li [ngbNavItem]="3" class="col-6 col-sm-3 bg-green border border-dark">
-                                <a (click)="headerColor = 'bg-green'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">GitHub</a>
+                            <li [ngbNavItem]="3" class="col-6 col-sm-3 bg-blue border border-dark">
+                                <a (click)="headerColor = 'bg-blue'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">GitHub</a>
                                 <ng-template ngbNavContent>
                                     <app-github-repos [headerColor]="headerColor"></app-github-repos>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2" class="col-6 col-sm-3 bg-green border border-dark">
+                                <a (click)="headerColor = 'bg-green'" ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3">Interests</a>
+                                <ng-template ngbNavContent>
+                                    <app-interests [headerColor]="headerColor"></app-interests>
                                 </ng-template>
                             </li>
                             <li [ngbNavItem]="4" class="col-6 col-sm-3 bg-red border border-dark">
