@@ -40,23 +40,19 @@
     <div class="col-lg-8 bg-light border border-dark border-5 border-top-0">
         <div class="row g-0">
             <div class="col">
-                <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">How I spend my Free time</h3>
+                <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">Code repositories</h3>
             </div>
         </div>
-        <div class="row g-0">
-            <div class="col-12 col-md-6 mb-3">
+        <div  class="row g-0">
+            <div *ngFor="let repo of repos$|async" class="col-12 col-md-6 mb-3">
                 <div class="row g-0">
-                    <!-- <div class="col-2">
-                        <fa-icon [icon]="faBookOpen" size="2x" [styles]="{'color': '#F20530'}" aria-hidden="true" [fixedWidth]="true"></fa-icon>
-                    </div> -->
                     <div class="col-12">
                         <h4 class="text-uppercase text-center text-md-start px-4">
                             <!-- <fa-icon [icon]="faBookOpen" [styles]="{'color': '#F20530'}" aria-hidden="true" [fixedWidth]="true" class="pe-1"></fa-icon>  -->
-                            Reading
+                            {{repo.name}}
                         </h4>
                         <p class="px-4 text-justify">
-                            When I'm not coding, you can find often me reading fantasy novels to expand my imagination and 
-                            non-fiction to expand my logical thought patterns, whilst challenging my own points of view. 
+
                         </p>
                     </div>
                 </div>
