@@ -1,7 +1,7 @@
 <div class="row g-0 d-flex">
     <div [ngClass]="headerColor" class="col-lg-4 text-light border border-dark border-5 border-top-0">
         <div class="row g-0">
-            <div class="col-12">
+            <div class="col-12 pb-3">
                 <h3 class="mt-4 mb-2 text-uppercase text-center fw-bold">
                     The real me...
                 </h3>
@@ -9,30 +9,35 @@
                     <div class="p-2">
                         <img class="rounded-circle img-fluid border border-dark" [src]="[profile.avatar_url]" alt="Look its me in my clark kent disguise">
                     </div>
-                    <p class="mt-3 fs-3"><span class="fw-bold">@{{profile.login}}</span></p>
-                    <p>
-                        <a class="text-light text-decoration-none" [href]="[profile.html_url]" 
+                    <p class="mt-3 fs-3">
+                        <a class="text-light text-decoration-none fw-bold" [href]="[profile.html_url]" 
                             target="_blank" rel="noopener" aria-label="Takes you to my github profile in a new tab">
-                                {{profile.html_url}}
+                                @{{profile.login}}
                         </a>
                     </p>
-                    <p class="fw-bold text-capitalize">
-                        <fa-icon [icon]="faCodeCommit" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
-                        public repos: {{profile.public_repos}}
-                    </p> 
-                    <p class="fw-bold text-capitalize">
-                        <fa-icon [icon]="faUserSecret" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
-                        followers: {{profile.followers}} 
-                    </p> 
-                    <p class="text-justify text-lg-start px-4">
-                        Hey there! I'm a Core Ops Engineer by day and a coder by night. I specialize in web development (Ecommerce), 
+
+                    <p>
+                        <span class="fw-bold fs-6 text-capitalize d-lg-inline me-1">
+                            <fa-icon [icon]="faUserSecret" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                            followers: {{profile.followers}} 
+                        </span>
+                        <span class="fw-bold fs-6 text-capitalize d-lg-inline ms-1">
+                            <fa-icon [icon]="faCodeCommit" size="sm" [styles]="{'color': '#F2D541'}" aria-hidden="true"></fa-icon>
+                            public repos: {{profile.public_repos}}
+                        </span> 
+                    </p>
+ 
+                    <p class="text-justify text-lg-start px-4 py-3">
+                        Hey there! I'm a Core Ops Engineer by day and a coder by night. I specialize in web development (E-commerce), 
                         but I love experimenting with different languages and technologies. Being a full-stack developer with a diploma in 
                         software development I have experience in Python, HTML, CSS, Django, Flask, JavaScript, jQuery, Git and more. I've 
                         been known to debate with myself "code or sleep," and usually, code wins.
                     </p>
-                    <p class="text-justify text-lg-start px-4">                            
-                        Feel free to check out my repos, and let's connect if you want to hire me, collaborate or simplychat about code!
+
+                    <p class="text-justify text-lg-start px-4 pb-3">                            
+                        Feel free to check out my repos, and let's connect if you want to hire me, collaborate or simply chat about code!
                     </p>
+
                 </div>
             </div>
         </div>
@@ -41,18 +46,30 @@
         <div class="row g-0">
             <div class="col">
                 <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">Code repositories</h3>
+                <p class="mx-4 mb-3">
+                    If you want to view or try out any of these projects then jump on over to my 
+                    <a routerLink="/portfolio" aria-label="Takes you to my portfolio page to see the deployed projects"> 
+                        portfolio page
+                    </a>
+                    where you can find a screenshot and a link to the deployed project.
+                </p>
             </div>
         </div>
         <div  class="row g-0">
-            <div *ngFor="let repo of repos$|async" class="col-12 col-md-6 mb-3">
+            <div *ngFor="let repo of repos$|async; let i = 'index + 1' ; last as isLast" [class.mx-auto]="isLast && i % 2 !== 0" class="col-12 col-md-6 mb-3">
+                
                 <div class="row g-0">
                     <div class="col-12">
-                        <h4 class="text-uppercase text-center text-md-start px-4">
-                            {{repo.name}}
+                        <h4 class="text-uppercase text-center px-4 pt-1 pb-1">
+                            <a [href]="[repo.html_url]" class="btn btn-lg btn-custom btn-blue text-white text-capitalize border border-danger border-2 fs-6 w-75 rounded-0">{{repo.name}}</a>
                         </h4>
-                        <p class="px-4 text-justify">
+                        <p class="px-4 pt-2 text-justify">
                             {{repo.description}}
                         </p>
+                        <div *ngIf="!isLast" class="text-center">
+                            <hr class="w-50 mx-auto border border-1 opacity-50">
+                        </div>
+                        
                     </div>
                 </div>
             </div>
