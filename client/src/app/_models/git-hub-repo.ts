@@ -6,7 +6,7 @@ export interface GitHubRepo {
     private: boolean;
     owner: JSON;
     html_url: string;
-    description?: any;
+    description?: string;
     fork: boolean;
     url: string;
     forks_url: string;

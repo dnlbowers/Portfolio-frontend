@@ -26,10 +26,16 @@ export class GithubService {
   getRepos() {
     if(this.repos.length > 0) return of(this.repos)
     return this.http.get<GitHubRepo[]>(this.baseUrl + "/repos").pipe(
-      map(repos => {
+      tap(repos => {
         this.repos = repos;
         return repos;
       })
     )
   }
+
+//   getLanguagesUsed() {
+//     this.repos.forEach(repos => {
+
+//     })
+//   }
 }
