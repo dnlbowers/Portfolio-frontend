@@ -1,6 +1,6 @@
-<main class="content-index container my-5 p-0 p-md-3">
-    <div class=" d-flex row g-0 mx-auto">
-            <div class="col-md-4 text-center order-2 order-md-1 border border-black" [ngClass]="headerColor">
+<main class="container my-4 p-md-3">
+    <div class="content-index  d-flex row g-0 mx-auto">
+            <div class="col-md-4 text-center order-2 order-md-1 border border-black border-3" [ngClass]="headerColor">
                 <img class="img-fluid" src="https://res.cloudinary.com/df4m8hva5/image/upload/v1643327169/jk1pf9wyzpicqcyzklby.jpg" alt="Placeholder">
             </div>
             <div class="col-md-8 d-flex flex-column justify-content-evenly order-1 order-md-2">
@@ -46,7 +46,7 @@
                     </nav>
                 </div>
             </div>
+        <div class="order-3" [ngbNavOutlet]="nav"></div>
             
     </div>
-    <div [ngbNavOutlet]="nav"></div>
 </main>
