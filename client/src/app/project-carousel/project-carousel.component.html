@@ -1,4 +1,4 @@
-<ngb-carousel *ngIf="projects" class="carousel-dark">
+<ngb-carousel *ngIf="projects" class="carousel-dark border border-3 border-dark">
     #carousel
 	[interval]="300"
     [unpauseOnArrow]="unpauseOnArrow"
@@ -7,14 +7,18 @@
 	(slide)="onSlide($event)"
 
 	<ng-template ngbSlide *ngFor="let project of projects|async">
-		<div class="picsum-img-wrapper rounded-4 border border-3 border-dark arousel carousel-dark slide">
-			<img class="w-100 rounded-4" [src]=[project.screenshot] alt=[project.title]>
-		</div>
-		<div class="carousel-caption">
-            <a [href]=[project.hosted_url] target="_blank" rel="noopener" [attr.aria-label]="'Opens ' + project.title + ' in new tab'">
-				<h3 class="btn btn-lg btn-green btn-custom text-light">{{project.title}}</h3>
-            </a>
-		</div>
+		<a [href]=[project.hosted_url] target="_blank" rel="noopener" [attr.aria-label]="'Opens ' + project.title + ' in new tab'">
+			<div class="picsum-img-wrapper carousel carousel-dark slide">
+				<img class="w-100" [src]=[project.screenshot] alt=[project.title]>
+			</div>
+		
+			<div class="carousel-caption mb-2">
+				<h3 class="d-none d-md-inline gold-plaque mx-auto border border-dark border-3 rounded shadow-lg px-3 py-2 
+					text-capitalize fw-bold">
+					{{project.title}}
+				</h3>
+			</div>
+		</a>
 	</ng-template>
 </ngb-carousel>
 

@@ -6,4 +6,15 @@
 
 ::ng-deep .carousel-indicators button {
     opacity: 1 !important;
+    
+}
+
+::ng-deep .carousel-indicators {
+    margin-bottom: 0;
+}
+
+.gold-plaque {
+    background: linear-gradient(to right, #BF935f, #fcf6Ba, #Fbf587, #AA771c) !important;
+    color: #000;
+    text-shadow: 1px 2px 0px #fafafa;
 }
