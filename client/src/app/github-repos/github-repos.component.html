@@ -1,5 +1,5 @@
 <div class="row g-0 d-flex">
-    <div [ngClass]="headerColor" class="col-lg-4 text-light border border-dark border-5 border-top-0">
+    <div [ngClass]="headerColor" class="col-lg-4 text-light border border-black border-5 border-top-0">
         <div class="row g-0">
             <div class="col-12 pb-3">
                 <h3 class="mt-4 mb-2 text-uppercase text-center fw-bold">
@@ -7,7 +7,7 @@
                 </h3>
                 <div class="text-center" *ngIf="profile">
                     <div class="p-2">
-                        <img class="rounded-circle img-fluid border border-dark" [src]="[profile.avatar_url]" alt="Look its me in my clark kent disguise">
+                        <img class="rounded-circle img-fluid border border-black" [src]="[profile.avatar_url]" alt="Look its me in my clark kent disguise">
                     </div>
                     <p class="mt-3 fs-3">
                         <a class="text-light text-decoration-none fw-bold" [href]="[profile.html_url]" 
@@ -42,16 +42,21 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-8 bg-light border border-dark border-5 border-top-0">
-        <div class="row g-0">
+    <div class="col-lg-8 bg-light border border-black border-5 border-top-0">
+        <div class="row g-0 my-3">
             <div class="col">
-                <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">Code repositories</h3>
-                <p class="mx-4 mb-3">
+                <h3 class="mb-3 text-uppercase text-center text-lg-start fw-bold">Code repositories</h3>
+                <p class="mx-4 mb-3 text-justify text-lg-start">
                     If you want to view or try out any of these projects then jump on over to my 
                     <a routerLink="/portfolio" aria-label="Takes you to my portfolio page to see the deployed projects"> 
                         portfolio page
                     </a>
-                    where you can find a screenshot and a link to the deployed project.
+                    where you can find a screenshot with a button to take you directly to the deployed project.
+                </p>
+                <p class="mx-4 mb-3 text-justify text-lg-start">
+                    Otherwise click one of the buttons below to be taken directly to the project repository on GitHub.
+                    Here you will see the source code and the documentation detailing the planning process, implemented features,
+                    AGILE planning, testing process and more.
                 </p>
             </div>
         </div>
@@ -61,7 +66,12 @@
                 <div class="row g-0">
                     <div class="col-12">
                         <h4 class="text-uppercase text-center px-4 pt-1 pb-1">
-                            <a [href]="[repo.html_url]" class="btn btn-lg btn-custom btn-blue text-white text-capitalize border border-danger border-2 fs-6 w-75 rounded-0">{{repo.name}}</a>
+                            <a [href]="[repo.html_url]" 
+                                class="btn btn-lg btn-custom btn-blue text-white text-capitalize border border-danger border-2 fs-6 w-75 rounded-0"
+                                target="_blank" rel="noopener" aria-label="Takes you to my github profile in a new tab"
+                                >
+                                    {{repo.name}}
+                            </a>
                         </h4>
                         <p class="px-4 pt-2 text-justify">
                             {{repo.description}}

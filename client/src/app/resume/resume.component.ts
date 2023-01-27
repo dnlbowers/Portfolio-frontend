@@ -24,11 +24,11 @@ export class ResumeComponent implements OnInit {
 
   styleUpdate() {
     if (window.innerWidth < 992) {
-      this.workColors = "bg-light text-black border border-dark border-5 border-top-0";
-      this.skillsColors = "bg-dark text-light ";
+      this.workColors = "bg-light text-black border border-black border-5 border-top-0";
+      this.skillsColors = "bg-black text-light ";
     } else {
       this.workColors = "bg-black text-light";
-      this.skillsColors = "bg-light text-black border border-dark border-5 border-top-0"
+      this.skillsColors = "bg-light text-black border border-black border-5 border-top-0"
     }
   }
 

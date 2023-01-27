@@ -86,6 +86,10 @@ body {
     border-bottom: 2px solid #F20530;
 }
 
+.border-black {
+    border-color: #000 !important;
+}
+
 /* ------------------------------------------------------------- Buttons*/
 
 .btn-green {
