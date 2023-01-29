@@ -6,7 +6,7 @@
         <fa-icon [icon]="faCode"></fa-icon>
       </a>
     
-      <button class="navbar-toggler text-light me-3" 
+      <button class="navbar-toggler text-light me-1 me-md-3" 
         type="button" [attr.aria-expanded]="!isCollapsed"
           aria-controls="navbarSupportedContent" 
             aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
@@ -15,7 +15,7 @@
       </button>
       <div class="navbar-collapse" [class.collapse]="isCollapsed" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 ms-md-auto me-md-3 mb-lg-0">
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 px-md-1">
             <a class="nav-link link-light fs-5" 
               routerLink="/" 
                 [routerLinkActive]="['active']" 
@@ -24,7 +24,7 @@
               Home
             </a>
           </li>
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 px-md-1">
             <a class="nav-link link-light fs-5" 
               [routerLinkActive]="['active']" 
                 [routerLinkActiveOptions]="{exact:true}" 
@@ -33,7 +33,7 @@
               Portfolio
             </a>
           </li>
-          <li ngbDropdown class="nav-item dropdown px-3" routerLink="/showcase">
+          <li ngbDropdown class="nav-item dropdown px-3 px-md-1" routerLink="/showcase">
             <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" [routerLinkActive]="['active']" ngbDropdownToggle>
               Showcase
             </a>
@@ -63,7 +63,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item px-3">
+          <li class="nav-item px-3 px-md-1">
             <a class="nav-link fs-5 text-light">Blog</a>
           </li>
         </ul>
