@@ -17,7 +17,7 @@ export class GithubReposComponent implements OnInit {
   
   @Input() headerColor!: string;
 
-  profile: GithubProfile | undefined = undefined;
+  profile: GithubProfile | undefined;
   repos$: Observable<GitHubRepo[]> | undefined;
 
   constructor(private githubService: GithubService) { }
