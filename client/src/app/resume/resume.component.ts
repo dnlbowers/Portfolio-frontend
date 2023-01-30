@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faBug, faGears, faTv } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faBug, faGears, faTv } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-resume',
@@ -8,9 +8,10 @@ import { faBug, faGears, faTv } from '@fortawesome/free-solid-svg-icons';
 })
 export class ResumeComponent implements OnInit {
   
-  faTv = faTv
-  faGears = faGears
-  faBug = faBug
+  faTv = faTv;
+  faGears = faGears;
+  faBug = faBug;
+  faBriefcase = faBriefcase;
 
   @Input() headerColor!: string;
   workColors: string | undefined;

@@ -8,6 +8,7 @@
     padding: 4em 2em 0em 2em;
     position: relative;
     border-left: 1px solid;
+    width: 100% !important;
 
 }
 
@@ -41,6 +42,20 @@
     background-color: #000;
 }
 
+@media only screen and (min-width: 576px) {
+    .timeline-item {
+        width: 85%!important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline-item {
+        width: 65%!important;
+    }
+}
+
+
+
 
 @media only screen and (min-width: 992px) {
     .timeline-item:after {
@@ -53,5 +68,9 @@
         border-radius: 12px;
         content: ' ';
         background-color: #fafafa;
+    }
+
+    .timeline-item {
+        width: 100%!important;
     }
 }

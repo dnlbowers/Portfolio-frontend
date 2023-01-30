@@ -1,13 +1,15 @@
 <div class="row g-0 d-flex">
     <div [ngClass]="workColors" class="col-lg-4 order-2 order-lg-1 section-column">
-        <div class="row g-0  mt-md-3">
+        <div class="row g-0  mt-lg-3">
             <div class="col-12">
-                <h3 class="mt-4 mb-3 pb-md-5 text-uppercase text-center text-lg-start fw-bold">
+                <h3 class="mt-4 mb-3 pb-lg-5 text-uppercase text-center text-lg-start fw-bold">
+                    <fa-icon [icon]="faBriefcase" [styles]="{'color': '#000'}" aria-hidden="true" size="xs" class="pe-1 d-lg-none"></fa-icon>
+                    <fa-icon [icon]="faBriefcase" [styles]="{'color': '#fafafa'}" aria-hidden="true" size="xs" class="pe-1 d-none d-lg-inline"></fa-icon>
                     work history
                 </h3>
             </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 my-md-4 mt-lg-0 ps-2 ps-sm-0 d-sm-flex flex-column align-items-end">
             <div class="timeline-item" data-dates="08/2018 - Present">
                 <h4 class="ms-1">Greentube</h4>
                 <p class="mt-1 ms-2 pb-1">Present Role:</p>
@@ -93,14 +95,20 @@
                         <div class="col d-flex flex-column px-4">
                             <p class="border border-black rounded-pill">
                                 <ngb-progressbar [ariaLabel]="'current percentage of time using / Python'" 
-                                    type="primary"  [value]="95">
+                                    type="warning"  [value]="80" [textType]="'dark'">
                                         <b class="text-start ps-2">Python</b>
                                 </ngb-progressbar>
                             </p>
                             <p class="border border-black rounded-pill">
-                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF / Python / Unittest'" 
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF'" 
                                     type="success" [value]="90">
                                         <b class="text-start ps-2">Django / Django Rest Framework</b>
+                                </ngb-progressbar>
+                            </p>
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning C sharp / dotnet'" 
+                                    type="primary" [value]="40">
+                                        <b class="text-start ps-2">C# / Dotnet</b>
                                 </ngb-progressbar>
                             </p>
 
