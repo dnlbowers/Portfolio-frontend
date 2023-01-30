@@ -1,8 +1,11 @@
 <main class="container-fluid container-md h-auto my-4 my-md-5">
     <div class="content-index shadow-lg rounded w-100 mx-auto">
         <h2 class="fw-bold text-center my-1 p-2">Recent Projects</h2>
+        <div class="pb-2 px-2 px-md-5 mb-md-4">
+            <app-project-carousel  [projects]="projects$"></app-project-carousel>
+        </div>
         <p class="text-justify text-md-start my-1 pb-3 px-3 px-md-5">
-            Below are a collection of my recent projects. 
+            Above is a collection of my recent projects. 
             Although I have been self-learning various coding languages for years, 
             below is an amalgamation of some of my more recent learning. 
             I am currently learning, growing, and improving my skill sets, 
@@ -18,10 +21,6 @@
         <p class="text-justify text-md-start mb-1 pb-3 px-3 px-md-5">
             The other option? Skip the details and enjoy the final product by clicking project image below.
         </p>
-        
-        <div class="pb-2 px-2 px-md-5 mb-md-4">
-            <app-project-carousel  [projects]="projects$"></app-project-carousel>
-        </div>
     </div>
 </main>
 

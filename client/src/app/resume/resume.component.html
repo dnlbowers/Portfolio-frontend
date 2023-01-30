@@ -1,8 +1,8 @@
 <div class="row g-0 d-flex">
     <div [ngClass]="workColors" class="col-lg-4 order-2 order-lg-1 section-column">
-        <div class="row g-0">
+        <div class="row g-0  mt-md-3">
             <div class="col-12">
-                <h3 class="mt-4 mb-2 text-uppercase text-center fw-bold">
+                <h3 class="mt-4 mb-3 pb-md-5 text-uppercase text-center text-lg-start fw-bold">
                     work history
                 </h3>
             </div>
@@ -29,18 +29,15 @@
     </div>
     <div [ngClass]="skillsColors" class="col-lg-8 order-1 order-lg-2">
         <div class="row g-0">
-            <div class="col">
-                <h3 class="mt-4 mb-3 text-uppercase text-center text-lg-start fw-bold">my skills</h3>
+            <div class="col ">
+                <h3 class="mt-4 mb-3 p-md-3 text-uppercase text-center text-lg-start fw-bold">my skills</h3>
             </div>
         </div>
         <div class="row g-0">
             <div class="col-12 col-md-6 mb-3">
                 <div class="row g-0">
-                    <!-- <div class="col-2 text-center">
-                        <fa-icon [icon]="faTv" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon>
-                    </div> -->
-                    <div class="col-12">
-                        <h4 class="text-uppercase text-center text-md-start">
+                    <div class="col-12 p-md-3">
+                        <h4 class="text-uppercase text-center text-md-start offest-md-1">
                             <fa-icon [icon]="faTv" [styles]="{'color': '#F20530'}" aria-hidden="true" class="pe-1"></fa-icon> 
                             Front end
                         </h4>
@@ -49,67 +46,112 @@
                             I also have extensive experience in Front End Frameworks such as Angular
                             and React
                         </p>
+                    
+                        <div class="d-flex flex-column px-4">
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning HTML / HTML5'" 
+                                    type="primary"  [value]="95">
+                                        <b class="text-start ps-2">HTML / HTML5</b>
+                                </ngb-progressbar>
+                            </p>
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning CSS / Bootstrap'" 
+                                    type="info" [value]="85" [textType]="'dark'">
+                                        <b class="text-start ps-2">CSS / Bootstrap</b>
+                                </ngb-progressbar>
+                            </p>
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Javascript / JQuery'" 
+                                    type="warning" [value]="85" [textType]="'dark'">
+                                        <b class="text-start ps-2">Javascript / JQuery</b>
+                                </ngb-progressbar>
+                            </p>
+
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning TypeScript/Angular'" 
+                                    type="danger" [value]="50">
+                                        <b class="text-start ps-2">Angular / Typescript</b>
+                                </ngb-progressbar>
+                            </p>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-3">
                 <div class="row g-0">
-                    <!-- <div class="col-2 text-center">
-                        <fa-icon [icon]="faGears" [styles]="{'color': '#F20530'}" aria-hidden="true"></fa-icon>
-                    </div> -->
-                    <div class="col-12">
-                        <h4 class="text-uppercase text-center text-md-start">
+                    <div class="col-12 p-md-3">
+                        <h4 class="text-uppercase text-center text-md-start offest-md-1">
                             <fa-icon [icon]="faGears" [styles]="{'color': '#F20530'}" aria-hidden="true" class="pe-1"></fa-icon> 
                             backend
                         </h4>
                         <p class="px-4 text-justify">
                             I specialize in data-driven web applications. Many of my projects
-                            utilise document-based data. I use Python and Django in conjunction
+                            utilize document-based data. I use Python and Django in conjunction
                             with MongoDB to process and present information.
                         </p>
+                        <div class="col d-flex flex-column px-4">
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / Python'" 
+                                    type="primary"  [value]="95">
+                                        <b class="text-start ps-2">Python</b>
+                                </ngb-progressbar>
+                            </p>
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF / Python / Unittest'" 
+                                    type="success" [value]="90">
+                                        <b class="text-start ps-2">Django / Django Rest Framework</b>
+                                </ngb-progressbar>
+                            </p>
+
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning SQL / ORM / NoSQL'" 
+                                    type="danger" [value]="80">
+                                        <b class="text-start ps-2">SQL/ORM/NoSQL</b>
+                                </ngb-progressbar>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <div class="row g-0">
-            <div class="col d-flex flex-column p-3">
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning HTML / HTML5'" 
-                        type="primary"  [value]="95">
-                            <b>HTML/HTML5</b>
-                    </ngb-progressbar>
-                </p>
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning CSS / Bootstrap'" 
-                        type="info" [value]="85">
-                            <b>CSS/Bootstrap</b>
-                    </ngb-progressbar>
-                </p>
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Javascript / JQuery / Jest / Postman'" 
-                        type="warning" [value]="85" [textType]="'dark'">
-                            <b>Javascript/JQuery/Jest/Postman</b>
-                    </ngb-progressbar>
-                </p>
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Django / DRF / Python / Unittest'" 
-                        type="success" [value]="90">
-                            <b>Django/DRF/Python/Unittest</b>
-                    </ngb-progressbar>
-                </p>
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning TypeScript/Angular'" 
-                        type="danger" [value]="80">
-                            <b>TypeScript/Angular</b>
-                    </ngb-progressbar>
-                </p>
-                <p class="border border-black rounded-pill">
-                    <ngb-progressbar [ariaLabel]="'current percentage of time using / learning SQL / ORM / NoSQL'" 
-                        type="secondary" [value]="90">
-                            <b>SQL/ORM/NoSQL</b>
-                    </ngb-progressbar>
-                </p>
+            <div class="col-12 col-md-6 mb-3 mx-auto">
+                <div class="row g-0">
+                    <div class="col-12 p-md-3">
+                        <h4 class="text-uppercase text-center text-md-start offest-md-1">
+                            <fa-icon [icon]="faBug" [styles]="{'color': '#F20530'}" aria-hidden="true" class="pe-1"></fa-icon> 
+                            Testing
+                        </h4>
+                        <p class="px-4 text-justify">
+                            I enjoy nothing more that working code. For this reason I have invested time into
+                            the following testing frameworks.
+                        </p>
+                        <div class="col d-flex flex-column px-4">
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Postman'" 
+                                    type="warning"  [value]="65" [textType]="'dark'">
+                                        <b class="text-start ps-2">Postman</b>
+                                </ngb-progressbar>
+                            </p>
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning Unittest'" 
+                                    type="success" [value]="70">
+                                        <b class="text-start ps-2">Unittest</b>
+                                </ngb-progressbar>
+                            </p>
+
+                            <p class="border border-black rounded-pill">
+                                <ngb-progressbar [ariaLabel]="'current percentage of time using / learning SQL / ORM / NoSQL'" 
+                                    type="danger" [value]="65">
+                                        <b class="text-start ps-2">Jest</b>
+                                </ngb-progressbar>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
