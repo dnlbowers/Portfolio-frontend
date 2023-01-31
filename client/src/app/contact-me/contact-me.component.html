@@ -1,8 +1,24 @@
 <main class="container-fluid container-md h-auto my-4 my-md-5">
     <div class="content-index shadow-lg rounded w-100 mx-auto">
         <h2 class="fw-bold text-center my-1 p-2">Contact Me.</h2>
-
+        Name: {{contactForm.value.name}}
+        Email: {{contactForm.value.email}}
+        Message: {{contactForm.value.message}}
+        
+        <form class="d-flex flex-column" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" formControlName="name" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" formControlName="email" placeholder="Your email" required>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" formControlName="message" placeholder="Your message" required></textarea>
+            <p class="text-center">Form must have all fields completed in order to submit it.</p>
+            <button type="submit" [disabled]="!contactForm.valid"
+                class="btn btn-lg btn-green btn-custom mt-2 text-light">
+                    Submit
+            </button>
+        </form>
         
     </div>
-  </main>
+</main>
   

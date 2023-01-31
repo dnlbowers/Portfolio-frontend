@@ -33,13 +33,13 @@
               Portfolio
             </a>
           </li>
-          <li ngbDropdown class="nav-item dropdown px-3 px-md-1" routerLink="/showcase">
-            <a  class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" [routerLinkActive]="['active']" ngbDropdownToggle>
+          <li ngbDropdown class="nav-item dropdown px-3 px-md-1">
+            <a [class.active]="makeParentActive" class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
               Showcase
             </a>
             <ul ngbDropdownMenu class="dropdown-menu p-0 border border-dark border-3 overflow-hidden">
               <li ngbDropdownItem class="p-0">
-                <a class="dropdown-item text-light fw-bolder drop-bg-1 p-3 fs-5 black-text-shadow"
+                <a (click)="makeParentActive  = true" class="dropdown-item text-light fw-bolder drop-bg-1 p-3 fs-5 black-text-shadow"
                   [routerLinkActive]="['active']" 
                   [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/showcase/cv">
@@ -47,7 +47,7 @@
                 </a>
               </li>
               <li ngbDropdownItem class="p-0">
-                <a class="dropdown-item text-light fw-bolder drop-bg-2 p-3 fs-5 black-text-shadow border border-dark border-3 border-start-0 border-end-0" href="#"
+                <a (click)="makeParentActive = true" class="dropdown-item text-light fw-bolder drop-bg-2 p-3 fs-5 black-text-shadow border border-dark border-3 border-start-0 border-end-0" href="#"
                   [routerLinkActive]="['active']" 
                   [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/showcase/certifications">

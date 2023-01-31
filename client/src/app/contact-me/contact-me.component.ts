@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -8,5 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactMeComponent {
 
-     
+  contactForm = new FormGroup({
+      name: new FormControl(""),
+      email: new FormControl(""),
+      message: new FormControl(""),
+    })
+
+    onSubmit(){
+      console.warn(this.contactForm.value);
+    }
 }
