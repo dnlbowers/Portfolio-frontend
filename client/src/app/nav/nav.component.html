@@ -64,7 +64,12 @@
             </ul>
           </li>
           <li class="nav-item px-3 px-md-1">
-            <a class="nav-link fs-5 text-light">Blog</a>
+            <a class="nav-link fs-5 text-light"
+              [routerLinkActive]="['active']" 
+                [routerLinkActiveOptions]="{exact:true}" 
+                  routerLink="/contact">
+                  Contact Me
+            </a>
           </li>
         </ul>
 
