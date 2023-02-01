@@ -19,7 +19,8 @@ export class NavComponent implements OnInit {
   ngOnInit() {
 
   }
-
+  // check here to solve this https://angular.io/guide/router#getting-route-information
+  
 
   // ngOnInit(){
   //   if(window.location.href.includes("showcase")){
