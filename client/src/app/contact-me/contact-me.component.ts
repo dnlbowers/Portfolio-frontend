@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { ContactForm } from '../_classes/contact-form';
 
 
 @Component({
@@ -9,15 +9,12 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactMeComponent {
 
-  contactForm = this.fb.group({
-      name: ["", Validators.required],
-      email: ["", Validators.required],
-      message: ["", Validators.required],
-    })
+    reasons = ['Question', 'Hire me', 'Comment/Feedback', 'Other'];
 
-    constructor(private fb: FormBuilder) { }
+    submitted = false;
 
     onSubmit(){
-      console.warn(this.contactForm.value);
+       this.submitted = true;
     }
+
 }

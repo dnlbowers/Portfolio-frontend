@@ -17,7 +17,7 @@ import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.co
 import { ResumeComponent } from './resume/resume.component';
 import { InterestsComponent } from './interests/interests.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 
 @NgModule({
@@ -43,7 +43,6 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
   ],
   
   providers: [],

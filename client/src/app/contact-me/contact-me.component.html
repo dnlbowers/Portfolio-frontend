@@ -1,25 +1,26 @@
 <main class="container-fluid container-md h-auto my-4 my-md-5">
     <div class="content-index shadow-lg rounded w-100 mx-auto">
         <h2 class="fw-bold text-center my-1 p-2">Contact Me.</h2>
-        <p>Name: {{contactForm.value.name}}</p>
-        <p>Email: {{contactForm.value.email}}</p>
-        <p>Message: {{contactForm.value.message}}</p>
-        <p>Form Status: {{ contactForm.status }}</p>
-        
-        <form class="d-flex flex-column" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+               
+        <form class="d-flex flex-column form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" formControlName="name" placeholder="Your name" required>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" formControlName="email" placeholder="Your email" required>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your email" required>
+            <div class="form-group">
+                <label for="reason">Reason for contact:</label>
+                <select class="form-control" id="reason" required>
+                  <option *ngFor="let reason of reasons" [value]="reason">{{reason}}</option>
+                </select>
+              </div>
             <label for="message">Message</label>
-            <textarea name="message" id="message" formControlName="message" placeholder="Your message" required></textarea>
+            <textarea name="message" id="message" class="form-control" placeholder="Your message" required></textarea>
             <p class="text-center">Form must have all fields completed in order to submit it.</p>
-            <button type="submit" [disabled]="!contactForm.valid"
+            <button type="submit" 
                 class="btn btn-lg btn-green btn-custom mt-2 text-light">
                     Submit
             </button>
         </form>
-        
     </div>
 </main>
   
