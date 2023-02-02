@@ -9,9 +9,14 @@ import { ContactForm } from '../_classes/contact-form';
 })
 export class ContactMeComponent {
 
-    reasons = ['Question', 'Hire me', 'Comment/Feedback', 'Other'];
+    reasons = ['Hire me', 'Question', 'Comment/Feedback', 'Other'];
 
     submitted = false;
+
+    model = new ContactForm('', '', '', '');
+
+    selectedReason = this.reasons[0];
+
 
     onSubmit(){
        this.submitted = true;

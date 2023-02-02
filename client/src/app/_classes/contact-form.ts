@@ -5,5 +5,5 @@ export class ContactForm {
         public email: string,
         public reason: string,
         public message: string
-    ) { }
+    ) {    }
 }

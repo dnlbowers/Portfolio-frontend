@@ -1,20 +1,30 @@
 <main class="container-fluid container-md h-auto my-4 my-md-5">
     <div class="content-index shadow-lg rounded w-100 mx-auto">
         <h2 class="fw-bold text-center my-1 p-2">Contact Me.</h2>
-               
-        <form class="d-flex flex-column form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Your email" required>
+
+        <form #contactFrom="ngForm" class="d-flex flex-column">
+            {{model|json}}
             <div class="form-group">
-                <label for="reason">Reason for contact:</label>
-                <select class="form-control" id="reason" required>
-                  <option *ngFor="let reason of reasons" [value]="reason">{{reason}}</option>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" 
+                    placeholder="Your name" required [(ngModel)]="model.name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" 
+                    placeholder="Your email" required [(ngModel)]="model.email">
+            </div>
+            <div class="form-group mx-0">
+                <label for="reason">Reason for contacting me:</label>
+                <select class="form-control" id="reason" required [(ngModel)]="model.reason">
+                    <option *ngFor="let reason of reasons" [value]="reason")>{{reason}}</option>
                 </select>
-              </div>
-            <label for="message">Message</label>
-            <textarea name="message" id="message" class="form-control" placeholder="Your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" class="form-control" 
+                    placeholder="Your message" required [(ngModel)]="model.message"></textarea>
+            </div>
             <p class="text-center">Form must have all fields completed in order to submit it.</p>
             <button type="submit" 
                 class="btn btn-lg btn-green btn-custom mt-2 text-light">
@@ -23,4 +33,3 @@
         </form>
     </div>
 </main>
-  
