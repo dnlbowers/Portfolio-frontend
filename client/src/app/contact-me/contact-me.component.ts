@@ -15,8 +15,6 @@ export class ContactMeComponent {
 
     model = new ContactForm('', '', this.reasons[0], '');
 
-
-
     onSubmit(){
        this.submitted = true;
     }
