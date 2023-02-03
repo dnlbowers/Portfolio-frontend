@@ -13,26 +13,26 @@
                         <div *ngIf="name.invalid && (name.dirty || name.touched)"
                             class="alert p-0">
 
-                            <div class=" alert alert-danger m-0 rounded-0" *ngIf="name.errors?.['required']">
+                            <div class=" alert alert-danger m-0 border border-dark boarder-top-0 rounded-0" *ngIf="name.errors?.['required']">
                                 Name is required.
                             </div>
-                            <div class="alert alert-warning m-0 round" *ngIf="name.errors?.['minlength']">
+                            <div class="alert alert-warning m-0 border border-dark boarder-top-0 rounded-0" *ngIf="name.errors?.['minlength']">
                                 Name must be at least 3 characters long.
                             </div>
                         </div>
                 </div>
                 <div class="form-group" >
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="form-control rounded-0" 
+                    <input type="email" name="email" id="email" class="form-control rounded-0 text-lowercase" 
                         placeholder="Your email" required [(ngModel)]="model.email"
                         #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <div *ngIf="email.invalid && (email.dirty || email.touched)"
                         class="alert p-0">
 
-                        <div class=" alert alert-danger m-0 rounded-0" *ngIf="email.errors?.['required']">
-                            email is required.
+                        <div class=" alert alert-danger m-0 border border-dark boarder-top-0 rounded-0" *ngIf="email.errors?.['required']">
+                            An email is required.
                         </div>
-                        <div class="alert alert-warning m-0 round" *ngIf="email.errors?.['pattern']">
+                        <div class="alert alert-warning m-0 round border border-dark boarder-top-0 rounded-0" *ngIf="email.errors?.['pattern']">
                             Your email must follow standard conventions i.e name@domain.com
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                     <div *ngIf="message.invalid && (message.dirty || message.touched)"
                         class="alert p-0">
 
-                        <div class=" alert alert-danger m-0 rounded-0" *ngIf="message.errors?.['required']">
+                        <div class=" alert alert-danger m-0 border border-dark boarder-top-0 rounded-0" *ngIf="message.errors?.['required']">
                             Are you trying to give me the silent treatment via email? Come on write me a message ;-)
                         </div>
                     </div>
