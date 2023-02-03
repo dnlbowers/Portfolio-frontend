@@ -13,9 +13,8 @@ export class ContactMeComponent {
 
     submitted = false;
 
-    model = new ContactForm('', '', '', '');
+    model = new ContactForm('', '', this.reasons[0], '');
 
-    selectedReason = this.reasons[0];
 
 
     onSubmit(){

@@ -15,9 +15,9 @@
                     placeholder="Your email" required [(ngModel)]="model.email">
             </div>
             <div class="form-group mx-0">
-                <label for="reason">Reason for contacting me:</label>
-                <select class="form-control" id="reason" required [(ngModel)]="model.reason">
-                    <option *ngFor="let reason of reasons" [value]="reason")>{{reason}}</option>
+                <label for="reason">Reason for contact:</label>
+                <select class="form-control" id="reason" required [(ngModel)]="model.reason" [ngModelOptions]="{standalone: true}">
+                  <option *ngFor="let reason of reasons" [value]="reason">{{reason}}</option>
                 </select>
             </div>
             <div class="form-group">
