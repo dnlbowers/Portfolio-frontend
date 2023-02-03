@@ -17,6 +17,8 @@ export class ContactMeComponent {
 
     onSubmit(){
        this.submitted = true;
+       console.log(this.model);
+       console.log(this.submitted)
     }
 
 }
