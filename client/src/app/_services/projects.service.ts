@@ -9,7 +9,7 @@ import { Project } from '../_models/project';
 })
 export class ProjectsService {
 
-  baseUrl:string = "http://localhost:8000/api/";
+  baseUrl:string = "http://localhost:8000/api/portfolio/";
   projects: Project[] = [];
   imageUrl:string = "https://res.cloudinary.com/df4m8hva5/";
 
