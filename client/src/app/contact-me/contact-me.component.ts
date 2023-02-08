@@ -26,8 +26,7 @@ export class ContactMeComponent {
     onSubmit(){
       this.submitted = true;
       this.processing = true;
-      console.log(this.model);
-      console.log(this.submitted)
+      
     }
 
     editSubmission() {
@@ -39,17 +38,23 @@ export class ContactMeComponent {
       this.confirmed = true;
       this.submitted = false;
       //logic to send to the api here
-      this.contactRequestService.SendContactRequest(this.model).subscribe(response => {
-        console.log(response);
-      }, error => {
-        console.log(error);
+      this.contactRequestService.SendContactRequest(this.model).subscribe({
+        
+        next: (result) => {
+          console.log(result);
+          this.sentToApi = true;
+        },
+        
+        error: (error) => console.log(error),
+        complete: () => console.log('completed')
       });
       // then only if api call successful these actions should be taken 
-      this.sentToApi = true;
-      this.model = new ContactForm('', '', this.reasons[0], '');
-    }
+      
+    }  
 
-    sendNewMessage() {
+    sendNewMessage(): void {
+      this.model = new ContactForm('', '', this.reasons[0], '');
+
       this.processing = false;
       
       this.confirmed = false;
