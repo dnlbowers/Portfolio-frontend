@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContactForm } from '../_classes/contact-form';
+import { ContactRequestService } from '../_services/contact-request.service';
 
 
 @Component({
@@ -18,6 +19,10 @@ export class ContactMeComponent {
 
     model = new ContactForm('', '', this.reasons[0], '');
 
+    constructor(private contactRequestService: ContactRequestService) { }
+
+    // ngOnInit() {}
+
     onSubmit(){
       this.submitted = true;
       this.processing = true;
@@ -34,7 +39,11 @@ export class ContactMeComponent {
       this.confirmed = true;
       this.submitted = false;
       //logic to send to the api here
-
+      this.contactRequestService.SendContactRequest(this.model).subscribe(response => {
+        console.log(response);
+      }, error => {
+        console.log(error);
+      });
       // then only if api call successful these actions should be taken 
       this.sentToApi = true;
       this.model = new ContactForm('', '', this.reasons[0], '');
