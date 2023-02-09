@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
   makeParentActive = false;
 
   constructor() { }
-  
+
   ngOnInit(){
     if(window.location.href.includes("showcase")){
       this.makeParentActive = true;
@@ -24,4 +24,12 @@ export class NavComponent implements OnInit {
     }
    
   }
+
+  activeToggle() {
+    this.makeParentActive = !this.makeParentActive;
+  }
+  activeParentTrue() {
+    this.makeParentActive = true;
+  }
+  
 }
