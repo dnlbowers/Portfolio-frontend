@@ -4,7 +4,6 @@
             <h2 class="fw-bold text-center my-1 p-2">Contact Me.</h2>
 
             <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="d-flex flex-column px-3">
-                {{model|json}}
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form-control rounded-0" 
@@ -90,6 +89,11 @@
         <div [hidden]="!sentToApi">
             <h2>You messaged me:</h2>
             
+            <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
+        </div>
+        <div [hidden]="!showError">
+            <h2>{{ errorCode }} Error</h2>
+            <p>{{errorMessage}}</p>
             <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
         </div>
     </div>

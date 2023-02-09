@@ -16,6 +16,9 @@ export class ContactMeComponent {
     confirmed = false;
     sentToApi = false;
     processing = false;
+    showError= false;
+    errorMessage: string = "";
+    errorCode: number = 0;
 
     model = new ContactForm('', '', this.reasons[0], '');
 
@@ -37,7 +40,6 @@ export class ContactMeComponent {
     sendMessage() {
       this.confirmed = true;
       this.submitted = false;
-      //logic to send to the api here
       this.contactRequestService.SendContactRequest(this.model).subscribe({
         
         next: (result) => {
@@ -45,16 +47,23 @@ export class ContactMeComponent {
           this.sentToApi = true;
         },
         
-        error: (error) => console.log(error),
-        complete: () => console.log('completed')
+        error: (error) => {
+          console.log(error), 
+          this.showError = true,
+          this.errorCode = error.status, 
+          this.errorMessage = error.statusText;
+        },
+
+        complete: () => {
+          console.log('completed')
+        }
       });
-      // then only if api call successful these actions should be taken 
       
     }  
 
     sendNewMessage(): void {
       this.model = new ContactForm('', '', this.reasons[0], '');
-
+      this.showError = false;
       this.processing = false;
       
       this.confirmed = false;
