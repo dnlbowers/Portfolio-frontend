@@ -14,21 +14,14 @@ export class NavComponent implements OnInit {
   faBars = faBars;
   makeParentActive = false;
 
-  //Find way to make parent active when on showcase page and remove active when not on showcase page
   constructor() { }
-  ngOnInit() {
-
-  }
-  // check here to solve this https://angular.io/guide/router#getting-route-information
   
-
-  // ngOnInit(){
-  //   if(window.location.href.includes("showcase")){
-  //     this.makeParentActive = true;
-  //   } else {
-  //     this.makeParentActive = false;
-  //   }
-  //   //terminate if the page is not the showcase page
-  //   if(!this.makeParentActive) return;
-  // }
+  ngOnInit(){
+    if(window.location.href.includes("showcase")){
+      this.makeParentActive = true;
+    } else {
+      this.makeParentActive = false;
+    }
+   
+  }
 }
