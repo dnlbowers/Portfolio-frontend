@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-black boarder-bot-red navbar">
     <div class="container-fluid px-0">
-      <a (click)="activeToggle()" class="navbar-brand text-yellow blue-text-shadow ms-3 fs-3" routerLink="/">
+      <a (click)="activeParentFalse()" class="navbar-brand text-yellow blue-text-shadow ms-3 fs-3" routerLink="/">
         <fa-icon [icon]="faLaptopCode"></fa-icon>
         <h1 id="title" class="text-red d-inline">  Dev-Bowers </h1> 
         <fa-icon [icon]="faCode"></fa-icon>
@@ -16,7 +16,7 @@
       <div class="navbar-collapse" [class.collapse]="isCollapsed" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 ms-md-auto me-md-3 mb-lg-0">
           <li class="nav-item px-3 px-md-1">
-            <a (click)="activeToggle()" class="nav-link link-light fs-5" 
+            <a (click)="activeParentFalse()" class="nav-link link-light fs-5" 
               routerLink="/" 
                 [routerLinkActive]="['active']" 
                   [routerLinkActiveOptions]="{exact:true}"
@@ -25,7 +25,7 @@
             </a>
           </li>
           <li class="nav-item px-3 px-md-1">
-            <a (click)="activeToggle()" class="nav-link link-light fs-5" 
+            <a (click)="activeParentFalse()" class="nav-link link-light fs-5" 
               [routerLinkActive]="['active']" 
                 [routerLinkActiveOptions]="{exact:true}" 
                 routerLink="/portfolio"
@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item px-3 px-md-1">
-            <a (click)="activeToggle()" class="nav-link fs-5 text-light"
+            <a (click)="activeParentFalse()" class="nav-link fs-5 text-light"
               [routerLinkActive]="['active']" 
                 [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/contact">

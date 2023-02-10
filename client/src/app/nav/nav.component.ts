@@ -25,8 +25,8 @@ export class NavComponent implements OnInit {
    
   }
 
-  activeToggle() {
-    this.makeParentActive = !this.makeParentActive;
+  activeParentFalse() {
+    this.makeParentActive = false;
   }
   activeParentTrue() {
     this.makeParentActive = true;

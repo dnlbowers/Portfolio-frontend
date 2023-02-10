@@ -31,16 +31,16 @@
                                     <app-interests [headerColor]="headerColor"></app-interests>
                                 </ng-template>
                             </li>
-                            <li [ngbNavItem]="4" class="col-6 col-sm-3 bg-red border border-black">
-                                <a ngbNavLink class="text-light text-decoration-none fs-4 fw-bold p-3" target="_blank">
+                            <li class="col-6 col-sm-3 bg-red border border-black">
+                                <a href="../../assets/DavidBowersCV.pdf"  download class="text-light text-decoration-none fs-4 fw-bold p-3" target="_blank">
                                     CV
                                     <fa-icon [icon]="faDownload" 
                                     [fixedWidth]="true" [styles]="{'color': 'white'}"></fa-icon>
                                     <span class="sr-only">Download Link</span> 
                                 </a>
-                                <ng-template ngbNavContent>
+                                <!-- <ng-template ngbNavContent>
                                     <p>test cv</p>
-                                </ng-template>
+                                </ng-template> -->
                             </li>
                         </ul>
                     </nav>
