@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-black boarder-bot-red navbar">
     <div class="container-fluid px-0">
-      <a (click)="activeParentFalse()" class="navbar-brand text-yellow blue-text-shadow ms-3 fs-3" routerLink="/">
+      <a (click)="activeParentFalse()" class="text-yellow blue-text-shadow ms-3 fs-3 text-decoration-none" routerLink="/">
         <fa-icon [icon]="faLaptopCode"></fa-icon>
         <h1 id="title" class="text-red d-inline">  Dev-Bowers </h1> 
         <fa-icon [icon]="faCode"></fa-icon>
@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item px-3 px-md-1">
-            <a (click)="activeParentFalse()" class="nav-link fs-5 text-light"
+            <a (click)="activeParentFalse()" class="nav-link fs-5 link-light"
               [routerLinkActive]="['active']" 
                 [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/contact">
