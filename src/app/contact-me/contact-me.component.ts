@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ContactForm } from '../_classes/contact-form';
 import { ContactRequestService } from '../_services/contact-request.service';
 
@@ -23,8 +23,6 @@ export class ContactMeComponent {
     model = new ContactForm('', '', this.reasons[0], '');
 
     constructor(private contactRequestService: ContactRequestService) { }
-
-    // ngOnInit() {}
 
     onSubmit(){
       this.submitted = true;

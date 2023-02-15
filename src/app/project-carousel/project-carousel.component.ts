@@ -9,10 +9,11 @@ import { Project } from '../_models/project';
   styleUrls: ['./project-carousel.component.css'],
 })
 export class ProjectCarouselComponent {
-  	@Input() projects: Observable<Project[]> | undefined;
-  
 
-  	paused = false;
+    @Input() projects: Observable<Project[]> | undefined;
+
+
+    paused = false;
 	unpauseOnArrow = true;
 	pauseOnIndicator = false;
 	pauseOnHover = true;

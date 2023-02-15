@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
     } else {
       this.makeParentActive = false;
     }
-   
+
   }
 
   activeParentFalse() {
