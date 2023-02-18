@@ -4,14 +4,16 @@ import { HttpClient } from '@angular/common/http';
 import { map, of, tap } from 'rxjs';
 import { Project } from '../_models/project';
 
+import { environment } from './../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
 
-  baseUrl:string = "http://localhost:8000/api/portfolio/";
+  baseUrl:string = environment.projectsApiUrl;
   projects: Project[] = [];
-  imageUrl:string = "https://res.cloudinary.com/df4m8hva5/";
+  imageUrl:string = environment.cloudinaryImageUrl;
 
   constructor(private http: HttpClient) { }
 
