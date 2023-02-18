@@ -4,13 +4,13 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'dist/your-app-name')));
+app.use(express.static(path.join(__dirname, 'dist/client')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/your-app-name/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/client/index.html'));
 });
 
-const port = process.env.PORT || '5000';
+const port = process.env.PORT || '8080';
 app.set('port', port);
 
 const server = http.createServer(app);
