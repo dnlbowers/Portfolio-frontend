@@ -1,5 +1,5 @@
 FROM node:16 AS builder
-ARG CONFIGURATION='development'
+ARG CONFIGURATION='production'
 WORKDIR /app
 COPY package.json  package-lock.json ./
 RUN npm ci --legacy-peer-deps
