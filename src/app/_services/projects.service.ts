@@ -22,7 +22,7 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.baseUrl + "projects").pipe(
       tap(projects => {
         this.projects = projects;
-        this.createFullImageUrl();
+        // this.createFullImageUrl();
       }),
       map(projects => {
         return projects;
