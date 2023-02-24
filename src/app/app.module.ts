@@ -19,7 +19,6 @@ import { InterestsComponent } from './interests/interests.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
 import { FormsModule } from '@angular/forms';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { AngularEmojisModule } from 'angular-emojis';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { AngularEmojisModule } from 'angular-emojis';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    AngularEmojisModule,
   ],
   
   providers: [],
