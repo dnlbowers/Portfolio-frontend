@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 import { map, of, tap } from 'rxjs';
 import { Project } from '../_models/project';
@@ -22,7 +22,7 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.baseUrl + "projects").pipe(
       tap(projects => {
         this.projects = projects;
-        this.createFullImageUrl();
+        // this.createFullImageUrl();
       }),
       map(projects => {
         return projects;
