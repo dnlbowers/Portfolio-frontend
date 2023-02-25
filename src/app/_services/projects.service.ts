@@ -22,6 +22,7 @@ export class ProjectsService {
     return this.http.get<Project[]>(this.baseUrl + "projects").pipe(
       tap(projects => {
         this.projects = projects;
+        this.sortProjectsByCompletionDate();
         // this.createFullImageUrl();
       }),
       map(projects => {
@@ -30,6 +31,13 @@ export class ProjectsService {
     );
   }
   
+  sortProjectsByCompletionDate() {
+    this.projects.sort((a, b) => {
+      const dateA = new Date(a.completion_date);
+      const dateB = new Date(b.completion_date);
+      return dateB.getTime() - dateA.getTime();
+    });
+  }
 
   createFullImageUrl() {
     this.projects.forEach(project => {
