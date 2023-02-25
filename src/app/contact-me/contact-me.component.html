@@ -64,7 +64,7 @@
                 </button>
             </form>
         </div>
-        <div [hidden]="!submitted">
+        <div *ngIf="submitted">
             <h2>Review your message:</h2>
             <div class="row">
                 <div class="col-xs-3">Name:</div>
@@ -86,12 +86,12 @@
             <button type="button" class="btn btn-primary" (click)="editSubmission()">Edit</button>
             <button type="button" class="btn btn-primary" (click)="sendMessage(); contactForm.reset()">Confirm</button>
         </div>
-        <div [hidden]="!sentToApi">
+        <div *ngIf="sentToApi">
             <h2>You messaged me:</h2>
             
             <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
         </div>
-        <div [hidden]="!showError">
+        <div *ngIf="showError">
             <h2>{{ errorCode }} Error</h2>
             <p>{{errorMessage}}</p>
             <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
