@@ -10,7 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProjectCarouselComponent } from './project-carousel/project-carousel.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
@@ -19,6 +19,8 @@ import { InterestsComponent } from './interests/interests.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
 import { FormsModule } from '@angular/forms';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -43,9 +45,14 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    NgxSpinnerModule.forRoot({
+      type: 'ball-8bits',
+     }),
   ],
   
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
