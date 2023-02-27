@@ -54,47 +54,46 @@
                             Are you trying to give me the silent treatment via email? Come on write me a message ;-)
                         </div>
                     </div>
-                       
                 </div>
-                <p class="text-center">Form must have all fields completed in order to submit it.</p>
+                <p class="text-center mt-3">*All fields must be completed in order to submit the form.</p>
                 <button type="submit" 
-                    class="btn btn-lg btn-green btn-custom mt-2 text-light"
-                    [disabled]="!contactForm.form.valid">
+                    class="btn btn-lg btn-green btn-custom mt-2 text-light rounded-0"
+                    [hidden]="!contactForm.form.valid">
                         Submit
                 </button>
             </form>
         </div>
         <div *ngIf="submitted">
-            <h2>Review your message:</h2>
-            <div class="row">
-                <div class="col-xs-3">Name:</div>
-                <div class="col-xs-9">{{ model.name }}</div>
+            <h2 class="text-center">Review your message:</h2>
+            <div class="mx-md-5">
+                <p>Name: {{ model.name }}</p>
             </div>
-            <div class="row">
-                <div class="col-xs-3">Email:</div>
-                <div class="col-xs-9">{{ model.email }}</div>
+            <div class="mx-md-5">
+                <p>Email: {{ model.email }}</p>
             </div>
-            <div class="row">
-                <div class="col-xs-3">Reason:</div>
-                <div class="col-xs-9">{{ model.reason }}</div>
+            <div class="mx-md-5">
+                <p>Reason: {{ model.reason }}</p>
             </div>
-            <div class="row">
-                <div class="col-xs-3">Message:</div>
-                <div class="col-xs-9">{{ model.message }}</div>
+            <div class="mx-md-5">
+                <p>Message:</p>
+                <p>{{ model.message }}</p>
             </div>
             <br>
-            <button type="button" class="btn btn-primary" (click)="editSubmission()">Edit</button>
-            <button type="button" class="btn btn-primary" (click)="sendMessage(); contactForm.reset()">Confirm</button>
+            <div class="text-center">
+                <button type="button" class="btn btn-lg text-light btn-custom btn-blue rounded-0 m-1" (click)="editSubmission()">Edit</button>
+                <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendMessage(); contactForm.reset()">Confirm</button>
+            </div>
         </div>
-        <div *ngIf="sentToApi">
+        <div class="text-center" *ngIf="sentToApi">
             <h2>You messaged me:</h2>
             
-            <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
+            <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendNewMessage()">Send a New message</button>
         </div>
-        <div *ngIf="showError">
-            <h2>{{ errorCode }} Error</h2>
+        <div class="text-center" *ngIf="showError">
+            <h2>Something went wrong.</h2>
+            <p class="fs-2">{{ errorCode }} Error</p>
             <p>{{errorMessage}}</p>
-            <button type="button" class="btn btn-primary" (click)="sendNewMessage()">Send a New message</button>
+            <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendNewMessage()">Send a New message</button>
         </div>
     </div>
 </main>
