@@ -85,8 +85,8 @@
             </div>
         </div>
         <div class="text-center" *ngIf="sentToApi">
-            <h2>You messaged me:</h2>
-            
+            <h2>Your message has been successfully sent:</h2>
+            <p>I will endeavour to get back to you within the next 48 hours.</p>            
             <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendNewMessage()">Send a New message</button>
         </div>
         <div class="text-center" *ngIf="showError">
