@@ -12,6 +12,6 @@ export class AppComponent {
     console.log(environment.production)
   }
 
-  title = 'Dev-Bowers';
+  title = 'Dev-Bowers - Fullstack Developer';
 
 }

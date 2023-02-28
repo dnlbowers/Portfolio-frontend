@@ -8,10 +8,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
   { path: "", component:HomePageComponent, title: "Dev-Bowers - Home"},
-  { path: "portfolio", component: PortfolioComponent, title: "DB - Portfolio Projects" },
-  { path: "showcase/certifications", component: CertificationsComponent, title: "DB - Professional Qualifications" },
-  { path: "showcase/cv", component: CurriculumVitaeComponent, title: "DB - CV" },
-  { path: "contact", component: ContactMeComponent, title: "DB - Contact Me" },
+  { path: "portfolio", component: PortfolioComponent, title: "David Bowers - Portfolio Projects" },
+  { path: "showcase/certifications", component: CertificationsComponent, title: "David Bowers - Professional Qualifications" },
+  { path: "showcase/cv", component: CurriculumVitaeComponent, title: "David Bowers - CV" },
+  { path: "contact", component: ContactMeComponent, title: "David Bowers - Contact Me" },
   // { path: "blog", component: PortfolioComponent, title: "DB - Developing Developer Journal Blog" },
 ];
 
