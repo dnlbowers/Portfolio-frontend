@@ -6,11 +6,16 @@
 
 ::ng-deep .carousel-indicators button {
     opacity: 1 !important;
-    
 }
 
 ::ng-deep .carousel-indicators {
     margin-bottom: 0;
+}
+
+::ng-deep .carousel-control-next-icon, ::ng-deep .carousel-control-prev-icon {
+    background-color: #28397d !important;
+    border-radius: 50%;
+    opacity: 0.8;
 }
 
 .gold-plaque {
