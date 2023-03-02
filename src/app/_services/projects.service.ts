@@ -13,7 +13,6 @@ export class ProjectsService {
 
   baseUrl:string = environment.projectsApiUrl;
   projects: Project[] = [];
-  imageUrl:string = environment.cloudinaryImageUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +22,6 @@ export class ProjectsService {
       tap(projects => {
         this.projects = projects;
         this.sortProjectsByCompletionDate();
-        // this.createFullImageUrl();
       }),
       map(projects => {
         return projects;
@@ -39,9 +37,4 @@ export class ProjectsService {
     });
   }
 
-  createFullImageUrl() {
-    this.projects.forEach(project => {
-      project.screenshot = this.imageUrl.concat(project.screenshot);
-    })
-  }
 }
