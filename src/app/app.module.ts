@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { ServerErrorComponent } from './errors/server-error/server-error.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     InterestsComponent,
     GithubReposComponent,
     ContactMeComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
   ],
   imports: [
     BrowserModule,
