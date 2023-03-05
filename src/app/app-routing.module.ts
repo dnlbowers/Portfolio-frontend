@@ -9,7 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: "", component:HomePageComponent, title: "Dev-Bowers - Home"},
+  { path: "", component:HomePageComponent, title: "Dev-Bowers - Fullstack Developer" },
   { path: "portfolio", component: PortfolioComponent, title: "David Bowers - Portfolio Projects" },
   { path: "showcase/certifications", component: CertificationsComponent, title: "David Bowers - Professional Qualifications" },
   { path: "showcase/cv", component: CurriculumVitaeComponent, title: "David Bowers - CV" },
