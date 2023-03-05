@@ -26,11 +26,11 @@ import { faCode, faLaptopCode, faBars } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  isCollapsed = true;
+  isCollapsed: boolean = true;
   faCode = faCode;
   faLaptopCode = faLaptopCode
   faBars = faBars;
-  makeParentActive = false;
+  makeParentActive: boolean = false;
 
   constructor() { }
 
