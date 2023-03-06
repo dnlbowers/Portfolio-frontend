@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md bg-black boarder-bot-red navbar">
     <div class="container-fluid px-0">
       <a (click)="activeParentFalse()" class="text-yellow blue-text-shadow ms-3 fs-3 text-decoration-none" routerLink="/"
-        (click)="isCollapsed = true">
+        (click)="isCollapsed = true" (click)="closeDropdown()">
         <fa-icon [icon]="faLaptopCode"></fa-icon>
         <h1 id="title" class="text-red d-inline">  Dev-Bowers </h1> 
         <fa-icon [icon]="faCode"></fa-icon>
@@ -11,6 +11,7 @@
         type="button" [attr.aria-expanded]="!isCollapsed"
           aria-controls="navbarSupportedContent" 
             aria-label="Toggle navigation" (click)="toggle()"
+            (click)="closeDropdown()"
       >
         <span class="text-light"><fa-icon [icon]="faBars"></fa-icon></span>
       </button>
@@ -22,6 +23,7 @@
                 [routerLinkActive]="['active']" 
                   [routerLinkActiveOptions]="{exact:true}"
                   (click)="isCollapsed = true"
+                  (click)="closeDropdown()"
               >
               Home
             </a>
@@ -32,21 +34,23 @@
                 [routerLinkActiveOptions]="{exact:true}" 
                 routerLink="/portfolio"
                 (click)="isCollapsed = true"
+                (click)="closeDropdown()"
               >
               Portfolio
             </a>
           </li>
           <li ngbDropdown class="nav-item dropdown px-3 px-md-1">
-            <a [class.active]="makeParentActive" class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
+            <a (click)="openDropdown()" [class.active]="makeParentActive" class="nav-link dropdown-toggle fs-5 link-light" role="button" aria-expanded="false" ngbDropdownToggle>
               Showcase
             </a>
-            <ul ngbDropdownMenu class="dropdown-menu p-0 border border-dark border-3 overflow-hidden">
+            <ul ngbDropdownMenu [@navDropdownAnimation]="dropdownState" class="dropdown-menu p-0 border border-dark border-3">
               <li ngbDropdownItem class="p-0">
                 <a (click)="activeParentTrue()" class="dropdown-item text-light fw-bolder drop-bg-1 p-3 fs-5 black-text-shadow"
                   [routerLinkActive]="['active']" 
                   [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/showcase/cv"
                   (click)="isCollapsed = true"
+                  (click)="closeDropdown()"
                   >
                   Digital CV
                 </a>
@@ -57,6 +61,7 @@
                   [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/showcase/certifications"
                   (click)="isCollapsed = true"
+                  (click)="closeDropdown()"
                   >
                   Certificates
                 </a>
@@ -66,6 +71,7 @@
                   href="https://github.com/dnlbowers" aria-label="Check out my profile on github" 
                     rel="noopener" target="_blank"
                     (click)="isCollapsed = true"
+                    (click)="closeDropdown()"
                     >
                     Github
                 </a>
@@ -78,6 +84,7 @@
                 [routerLinkActiveOptions]="{exact:true}" 
                   routerLink="/contact"
                   (click)="isCollapsed = true"
+                  (click)="closeDropdown()"
                   >
                   Contact Me
             </a>

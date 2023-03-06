@@ -9,7 +9,7 @@ import { environment } from './../environments/environment';
 export class AppComponent {
 
   constructor () {
-    console.log(environment.production)
+    // console.log(environment.production)
   }
 
   title = 'Dev-Bowers - Fullstack Developer';
