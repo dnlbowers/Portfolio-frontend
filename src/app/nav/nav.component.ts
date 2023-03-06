@@ -36,9 +36,9 @@ export class NavComponent implements OnInit {
 
   ngOnInit(){
     if(window.location.href.includes("showcase")){
-      this.makeParentActive = true;
+      this.activeParentTrue();
     } else {
-      this.makeParentActive = false;
+      this.activeParentFalse();
     }
 
   }
