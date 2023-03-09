@@ -22,17 +22,16 @@ import { faCode, faLaptopCode, faBars } from '@fortawesome/free-solid-svg-icons'
     ]),
     trigger('navDropdownAnimation', [ 
       state('closed', style({
-        height: '0px',
+        height: '*',
         transform: 'translateX(100%)'
       })),
       state('open', style({
         height: '*',
         transform: 'translateX(0)',
       })),
-      transition('closed => open', [
-        animate('0.5s ease-in')
+      transition('closed <=> open', [
+        animate('0.5s ease-in-out')
       ]),
-      transition('closed => open', animate('0.3s ease-out'))
     ])
   ],
 
