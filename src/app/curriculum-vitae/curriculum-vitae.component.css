@@ -14,10 +14,8 @@ li > a {
     font-size: 1.5rem !important;
     font-weight: bold;
     border-radius: 0;
-    /* text-shadow: -2px 4px #F2D541; */
-    /* border-left: 2px solid #000;
-    border-right: 2px solid #000a;
-    border-bottom: 2px solid #000; */
+    text-shadow: 2px 2px 2px #f5d11e;
+    border: 2px solid #F2D541 !important;
 }
 
 .logo {
@@ -28,5 +26,8 @@ li > a {
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+}
 
+.content-index {
+    min-height: 1280px;
 }

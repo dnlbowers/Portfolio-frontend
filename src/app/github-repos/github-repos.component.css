@@ -1,3 +1,7 @@
 #githubImage {
     max-width: 270px;
 }
+
+.cv-section {
+    min-height: 736px;
+}
