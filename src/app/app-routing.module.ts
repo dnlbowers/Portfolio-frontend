@@ -9,13 +9,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: "", component:HomePageComponent, title: "Dev-Bowers - Fullstack Developer" },
-  { path: "portfolio", component: PortfolioComponent, title: "David Bowers - Portfolio Projects" },
-  { path: "showcase/certifications", component: CertificationsComponent, title: "David Bowers - Professional Qualifications" },
+  { path: "", component:HomePageComponent, data: { animation: 'HomePage'}, title: "David Bowers - Fullstack Developer" },
+  { path: "portfolio", component: PortfolioComponent, data: { animation: 'portfolioPage' }},
+  { path: "showcase/certifications", component: CertificationsComponent, data: { animation: 'qualificationsPage'}, title: "David Bowers - Professional Qualifications" },
   { path: "showcase/cv", component: CurriculumVitaeComponent, title: "David Bowers - CV" },
-  { path: "contact", component: ContactMeComponent, title: "David Bowers - Contact Me" },
-  { path: 'not-found', component: NotFoundComponent },
-  { path: 'server-error', component: ServerErrorComponent },
+  { path: "contact", component: ContactMeComponent, data: { animation: 'contactPage'}, title: "David Bowers - Contact Me" },
+  { path: 'not-found', component: NotFoundComponent, data: { animation: 'PageNotFound'}, title: "David Bowers - Page Not Found" },
+  { path: 'server-error', component: ServerErrorComponent, data: { animation: 'ServerError'}, title: "David Bowers - Server Error" },
   { path: '**', component: NotFoundComponent, pathMatch: "full" },
   // { path: "blog", component: PortfolioComponent, title: "DB - Developing Developer Journal Blog" },
 ];
