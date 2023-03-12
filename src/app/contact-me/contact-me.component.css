@@ -13,6 +13,20 @@
     border-right: 1px solid #000;
 }
 
-.content-index {
-    min-height: 800px;
+#message {
+    min-height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+    #review-msg {
+        min-width: 600px !important;
+    }
+}
+    
+
+@media screen and (min-width: 1400px) {
+    * {
+        font-size: 1.25rem;
+    }
+    
 }
