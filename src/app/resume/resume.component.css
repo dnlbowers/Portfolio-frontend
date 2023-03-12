@@ -1,11 +1,11 @@
-.section-column {
+/* .section-column {
     display: table-cell;
     padding: 0 10px 10px 20px;
     float: none;
-}
+} */
 
 .timeline-item {
-    padding: 4em 2em 0em 2em;
+    padding: 4em 6px 0em 14px;
     position: relative;
     border-left: 1px solid;
     width: 100% !important;
@@ -20,8 +20,8 @@
 .timeline-item:before {
     content: attr(data-dates);
     position: absolute;
-    left: 2.5em;
-    top: 3em;
+    left: 0.95em;
+    top: 36px;
     display: block;
     font-family: "Exo", sans-serif;
     font-weight: 500;
