@@ -2,12 +2,12 @@
     <div class="content-index shadow-lg rounded w-100 mx-auto">
         <div [hidden]="processing">
             <h2 class="fs-1 fw-bold text-center my-1 p-2">Contact Me.</h2>
-            <p class="px-3 py-3 px-md-4 text-justify">
+            <p class="px-3 py-3 px-md-5 text-justify">
                 I am available for freelance/contract work; if you wish to share a vision with the world, 
                 drop me a message with the form below. I'll be happy to discuss how I can assist you 
                 in making that dream a reality. 
             </p>
-            <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="d-flex flex-column px-3">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="d-flex flex-column px-3 px-md-5">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form-control rounded-0" 
@@ -67,7 +67,7 @@
                 </button>
             </form>
         </div>
-        <div id="review-msg" class="p-3" *ngIf="submitted">
+        <div id="review-msg" class="p-3 px-md-5" *ngIf="submitted">
             <h2 class="text-center fs-1 fw-bold">Review your message:</h2>
             <div class="mx-md-5">
                 <p>Name: {{ model.name }}</p>
@@ -88,14 +88,15 @@
                 <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendMessage(); contactForm.reset()">Confirm</button>
             </div>
         </div>
-        <div class="text-center p-3" *ngIf="sentToApi">
+        <div class="text-center p-3 px-md-5" *ngIf="sentToApi">
             <h2 class="text-center fs-1 fw-bold">Your message has been successfully sent:</h2>
             <p>I will endeavour to get back to you within the next 48 hours.</p>            
             <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendNewMessage()">Send a New message</button>
         </div>
-        <div class="text-center p-3" *ngIf="showError">
+        <div class="text-center p-3 px-md-5" *ngIf="showError">
             <h2 class="text-center fs-1 fw-bold">Something went wrong.</h2>
-            <p class="fs-2">{{ errorCode }} Error</p>
+            <p class="fs-2">Its not you, it's me!</p>
+            <p class="fs-5">If the the error persists, please email me on dnlbowers@gmail.com and advise me that this form is giving you a "{{ errorCode }} Error"</p>
             <p>{{errorMessage}}</p>
             <button type="button" class="btn btn-lg text-light btn-custom btn-green rounded-0 m-1" (click)="sendNewMessage()">Send a New message</button>
         </div>
